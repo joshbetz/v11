@@ -1,0 +1,1 @@
+(function(e){function t(){if(typeof disableStyleCode!="undefined")return;var t=!1;e("pre code").parent().each(function(){if(!e(this).hasClass("prettyprint")){e(this).addClass("prettyprint").addClass("linenums");t=!0}});t&&prettyPrint()}t();e("article").fitVids({customSelector:"iframe[src^='//speakerdeck.com']"})})(jQuery);
