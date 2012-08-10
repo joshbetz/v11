@@ -226,6 +226,7 @@ article {
 		background: lightgrey;
 		@include border-radius( 3px );
 	}
+
 	p, pre, ul, ol, video, embed, audio {
 		margin-bottom: 20px;
 	}
@@ -235,6 +236,11 @@ article {
 	ol.linenums { margin-left: 12px; }
 	ol { list-style: decimal; }
 	ul { list-style: disc; }
+	sup {
+		vertical-align: super;
+		font-size: 12px;
+	}
+	
 	&:last-child { margin-bottom: 0; }
 	&:after {
 		content: "~";
