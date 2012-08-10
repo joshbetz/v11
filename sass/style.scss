@@ -269,6 +269,16 @@ article {
 .footer-right {
 	float: right;
 }
+.footnotes {
+	font-size: 12px;
+	hr {
+		border: 0;
+		border-top: solid 1px $vlightgrey;
+	}
+	ol {
+		padding: 5px 20px;
+	}
+}
 
 pre, code {
   font-family: "inconsolata", monospace;
