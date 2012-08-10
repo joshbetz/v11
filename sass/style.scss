@@ -30,7 +30,7 @@ $body: "ff-meta-serif-web-pro", serif;
 
 body {
 	background: url(../images/bg.png);
-	padding: 5%;
+	padding: 40px 5%;
 	font-family: $body;
 	font-size: 14px;
 	margin: 0 auto;
@@ -96,6 +96,21 @@ body {
 		&:last-child {
 			border-right: 0;
 		}
+		&.menu-item-has-children {
+			padding-right: 30px
+		}
+		&.menu-item-has-children:after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 16px;
+			top: 11px;
+			width: 0; 
+			height: 0; 
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid $darkyellow;
+		}
 	}
 	#searchbox {
 		position: absolute;
@@ -157,15 +172,15 @@ body {
 /* Typography */
 
 #sitetitle {
+	margin-bottom: 20px;
 	a {
 		color: $yellow;
-		font-size: 46px;
+		font-size: 52px;
 		font-weight: bold;
-		font-family: $sans;
+		font-family: $serif;
 		@include text-shadow( rgba(white, 0.5) 0 -1px 0 );
 		&:hover {
-			color: black;
-			@include text-shadow( rgba(white, 0.1) 0 -1px 0 );
+			color: $darkyellow;
 		}
 		&:active { top: 1px; }
 	}
@@ -197,8 +212,7 @@ a {
 /* Content */
 
 article {
-	margin-bottom: 50px;
-	padding-bottom: 50px;
+	margin-bottom: 25px;
 	.single & { margin-bottom: 0; padding-bottom: 0; }
 	h1 {
 		font-size: 26px;
@@ -215,6 +229,12 @@ article {
 	p, pre, ul, ol, video, embed, audio {
 		margin-bottom: 20px;
 	}
+	ol, ul {
+		padding-left: 20px;
+	}
+	ol.linenums { margin-left: 12px; }
+	ol { list-style: decimal; }
+	ul { list-style: disc; }
 	&:last-child { margin-bottom: 0; }
 	&:after {
 		content: "~";
@@ -223,6 +243,7 @@ article {
 		text-align: center;
 		font-family: "Baskerville", serif;
 		display: block;
+		margin-top: 25px;
 	}
 	.single &:after,
 	&:last-child:after {
@@ -260,6 +281,85 @@ pre, code {
 pre {
   overflow-x: scroll;
   code { background: transparent; border: 0; padding: 0; }
+}
+
+/* Comments */
+.comments-title {
+	font-size: 26px;
+}
+
+.comment {
+	margin: 20px 0;
+	padding: 5px;
+	&.bypostauthor {
+		background: $yellow;
+		border: solid 3px $darkyellow;
+	}
+	article {
+		margin: 0;
+		&:after {
+			content: "";
+			display: none;
+		}
+	}
+	header { margin-bottom: 0; }
+	b {
+		@include border-radius( 40px );
+		border: solid 5px rgba(black, 0.1);
+		width: 80px;
+		height: 80px;
+		display: inline-block;
+	}
+	.avatar {
+		@include border-radius( 35px );
+	}
+	cite {
+		position: absolute;
+		top: 5px; left: 100px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.date {
+		position: absolute;
+		top: 0; right: 0;
+		background: transparent;
+		font-weight: bold;
+		text-decoration: none;
+		color: $grey;
+		&:hover {
+			color: $lightgrey;
+		}
+	}
+	.comment-content {
+		margin-left: 100px;
+		margin-top: -60px;
+		line-height: 1.3;
+	}
+}
+.children {
+	margin-left: 100px;
+	.comment {
+		b {
+			width: 60px;
+			height: 60px;
+		}
+		.avatar {
+			width: 50px;
+			height: 50px;
+			@include border-radius( 25px );
+		}
+		cite {
+			left: 80px;
+			font-size: 16px;
+		}
+		.comment-content {
+			margin-left: 80px;
+			margin-top: -50px;
+		}
+	}
+	.children {
+		margin-left: 80px;
+	}
 }
 
 /* Accessibility */

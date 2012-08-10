@@ -21,6 +21,8 @@ class V11_Theme {
 		add_filter( 'post_link', array( $this, 'link_post_links' ) );
 		add_filter( 'the_permalink', array( $this, 'link_permalinks' ) );
 		add_filter( 'the_title', array( $this, 'link_titles' ), 10, 2 );
+		add_filter( 'nav_menu_css_class', array( $this, 'menu_item_has_children' ), 10, 3 );
+		add_filter( 'wp_page_menu_args', array( $this, 'home_page_menu_item' ) );
 	}
 
 	function theme_setup() {
@@ -38,7 +40,6 @@ class V11_Theme {
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
 
-		//TODO
 		// This theme uses wp_nav_menu() for the main nav.
 		register_nav_menu( 'primary', __( 'Primary Menu', 'v11' ) );
 	}
@@ -98,6 +99,17 @@ class V11_Theme {
 			'before_title' => '<h1 class="widget-title">',
 			'after_title' => '</h1>',
 		) );
+	}
+
+	function menu_item_has_children( $classes, $item, $args ) {
+		if ( $args->has_children )
+			$classes[] = 'menu-item-has-children';
+		return $classes;
+	}
+
+	function home_page_menu_item( $args ) {
+		$args['show_home'] = true;
+		return $args;
 	}
 
 	function remove_widows($title){
@@ -172,34 +184,32 @@ if ( ! function_exists( 'v11_comment' ) ) :
  */
 function v11_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
+	?>
+		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+	<?php
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 		// Display trackbacks differently than normal comments.
-	?>
-	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		<p><?php _e( 'Pingback:', 'v11' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'v11' ), '<span class="edit-link">', '</span>' ); ?></p>
+		?>
+			<p><?php _e( 'Pingback:', 'v11' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'v11' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
 		// Proceed with normal comments.
 		global $post;
 	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<header class="comment-meta comment-author vcard">
 				<?php
-					echo get_avatar( $comment, 44 );
-					printf( '<cite class="fn">%1$s %2$s</cite>',
-						get_comment_author_link(),
-						// If current post author is also comment author, make it known visually.
-						( $comment->user_id === $post->post_author ) ? '<span> ' . __( 'Post author', 'v11' ) . '</span>' : ''
-					);
-					printf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+					echo "<b>" . get_avatar( $comment, 70 ) . "</b>";
+					printf( '<cite class="fn">%1$s</cite>', get_comment_author_link() );
+
+					$datetime = time() - strtotime( get_comment_time( 'c' ) ) < 86400 ? human_time_diff( strtotime( get_comment_time( 'c' ) ) ) . ' ago' : get_comment_date();
+					printf( '<a class="date" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 						esc_url( get_comment_link( $comment->comment_ID ) ),
 						get_comment_time( 'c' ),
-						/* translators: 1: date, 2: time */
-						sprintf( __( '%1$s at %2$s', 'v11' ), get_comment_date(), get_comment_time() )
+						$datetime
 					);
 				?>
 			</header>
@@ -208,21 +218,23 @@ function v11_comment( $comment, $args, $depth ) {
 				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'v11' ); ?></p>
 			<?php endif; ?>
 
-			<section class="comment comment-content">
+			<section class="comment-content">
 				<?php comment_text(); ?>
 				<?php edit_comment_link( __( 'Edit', 'v11' ), '<p class="edit-link">', '</p>' ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'v11' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</section>
 
-			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'v11' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-			</div><!-- .reply -->
 		</article><!-- #comment-## -->
 	<?php
 		break;
 	endswitch; // end comment_type check
+	?>
+	</li>
+<?php
 }
 endif;
 
+add_action( 'widgets_init', create_function( '', 'register_widget( "V11_Bio_Widget" );' ) );
 class V11_Bio_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct( 'v11_bio_widget', __( 'v11 Bio Widget', 'v11' ), array( 'description' => __( 'A bio widget specific to the v11 theme.', 'v11' ) ) );
@@ -264,4 +276,3 @@ class V11_Bio_Widget extends WP_Widget {
 		<?php
 	}
 }
-add_action( 'widgets_init', create_function( '', 'register_widget( "V11_Bio_Widget" );' ) );

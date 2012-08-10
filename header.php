@@ -5,11 +5,6 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-
-	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
-	More info: h5bp.com/i/378 -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
 	<title><?php wp_title( ' &mdash; ', true, 'right' ); ?></title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
@@ -31,7 +26,7 @@
 
 	<div id="wrap">
 		<header id="header">
-			<h1 id="sitetitle"><a href="<?php home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+			<h1 id="sitetitle"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 			<?php if ( has_nav_menu( 'primary' ) ): ?>
 				<nav id="mainnav">
 					<?php
