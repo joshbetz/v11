@@ -7,11 +7,11 @@
         break;
       case 'video':
         //TODO
-        echo get_post_meta( $post->ID, '_format_video_embed', true );
+        echo wp_oembed_get( get_post_meta( $post->ID, '_format_video_embed', true ) );
         break;
       case 'audio':
         //TODO
-        echo get_post_meta( $post->ID, '_format_audio_embed', true );
+        echo wp_oembed_get( get_post_meta( $post->ID, '_format_audio_embed', true ) );
         break;
     }
   ?>
@@ -39,7 +39,7 @@
   <?php endif; ?>
 
   <div class="article">
-    <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'v11' ) ); ?>
+    <?php the_content( __( '<p class="readmore">Continue reading <span class="meta-nav">&rarr;</span></p>', 'v11' ) ); ?>
   </div>
 
 </article>
