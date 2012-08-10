@@ -5,7 +5,7 @@
 <?php if ( have_posts() ): ?>
   
   <?php while ( have_posts() ) : the_post(); ?>
-    <?php get_template_part( 'content', 'single' ); ?>
+    <?php get_template_part( 'loop' ); ?>
   <?php endwhile; ?>
 
   <?php if ( $wp_query->max_num_pages > 1 ) : ?>

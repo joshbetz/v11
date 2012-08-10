@@ -4,7 +4,7 @@
 
 <?php if ( have_posts() ): ?>
 	<?php while ( have_posts() ) : the_post(); ?>
-		<?php get_template_part( 'content', 'single' ); ?>
+		<?php get_template_part( 'loop' ); ?>
 
 		<nav class="nav-single">
 			<h3 class="assistive-text"><?php _e( 'Post navigation', 'v11' ); ?></h3>
