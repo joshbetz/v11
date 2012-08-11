@@ -36,7 +36,9 @@
 						);
 						wp_nav_menu( $opts );
 					?>
-					<input id="searchbox" type=type placeholder="Search...">
+					<form action="<?php echo home_url(); ?>">
+						<input id="searchbox" name="s" type=type placeholder="Search...">
+					</form>
 				</nav>
 			<?php endif; ?>
 		</header>
