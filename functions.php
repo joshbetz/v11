@@ -11,7 +11,7 @@ class V11_Theme {
 	const VERSION = 1.0;
 	
 	function __construct() {
-		add_action('init', array( $this, 'init' ) );
+		add_action( 'init', array( $this, 'init' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_action( 'wp_title', array( $this, 'twentytwelve_wp_title' ), 10, 2 );
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
@@ -26,6 +26,11 @@ class V11_Theme {
 		add_filter( 'the_title', array( $this, 'link_titles' ), 10, 2 );
 		add_filter( 'nav_menu_css_class', array( $this, 'menu_item_has_children' ), 10, 3 );
 		add_filter( 'wp_page_menu_args', array( $this, 'home_page_menu_item' ) );
+
+		if ( ! defined( 'CFPF_VERSION' ) ) {
+			require 'includes/cf_post_formats/cf-post-formats.php';
+			add_filter( 'cfpf_base_url', function() { return get_template_directory_uri() . '/includes/cf_post_formats'; } );
+		}
 	}
 
 	function theme_setup() {
