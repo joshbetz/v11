@@ -368,7 +368,14 @@ pre {
 }
 .children {
 	margin-left: 100px;
-	.comment {
+	li.comment {
+		&:before {
+			position: absolute;
+			content: url(../images/arrow-grey-big.png);
+			left: -52px;
+			top: 20px;
+		}
+		&.bypostauthor:before { content: url(../images/arrow-yellow-big.png); }
 		b {
 			width: 60px;
 			height: 60px;
@@ -389,6 +396,14 @@ pre {
 	}
 	.children {
 		margin-left: 80px;
+		li.comment {
+			&:before {
+				content: url(../images/arrow-grey-small.png);
+				left: -46px;
+				top: 24px;
+			}
+			&.bypostauthor:before { content: url(../images/arrow-yellow-small.png); }
+		}
 	}
 }
 
