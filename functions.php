@@ -1,5 +1,7 @@
 <?php
 
+require 'includes/icons-widget.php';
+
 /**
  * V11 Theme
  */
