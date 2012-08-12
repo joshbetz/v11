@@ -64,7 +64,7 @@ body {
 	background: url(../images/nav-center.png);
 	position: relative;
 	top: 20px;
-	z-index: 20;
+	z-index: 100;
 	font-weight: bold;
 	&:before, &:after {
 		content: "";
@@ -90,25 +90,56 @@ body {
 	ul { line-height: 56px; }
 	li {
 		display: inline;
-		padding: 3px 20px;
 		border-right: solid 1px $darkyellow;
+		a { padding: 3px 20px; }
 		&:last-child {
 			border-right: 0;
 		}
 		&.menu-item-has-children {
-			padding-right: 30px
+			padding-right: 10px;
 		}
 		&.menu-item-has-children:after {
 			content: "";
 			display: block;
 			position: absolute;
 			right: 16px;
-			top: 11px;
+			top: 8px;
 			width: 0; 
 			height: 0; 
 			border-left: 5px solid transparent;
 			border-right: 5px solid transparent;
 			border-top: 5px solid $darkyellow;
+		}
+		& > .sub-menu {
+			display: none;
+			position: absolute;
+			top: 25px;
+			background: $yellow;
+			font-size: 14px;
+			@include border-radius( 4px );
+			@include box-shadow( 0 2px 2px rgba(black, 0.1) );
+			.sub-menu {
+				top: 7px;
+				left: 100%;
+			}
+		}
+		&:hover > .sub-menu {
+			display: block;
+		}
+	}
+	.sub-menu li {
+		height: 40px;
+		line-height: 40px;
+		display: block;
+		&:hover { background: $darkyellow; }
+		&:first-child { @include border-top-radius( 4px ); }
+		&:last-child { @include border-bottom-radius( 4px ); }
+		&.menu-item-has-children:after {
+			top: 18px;
+			right: 12px;
+		}
+		a {
+			display: block;
 		}
 	}
 	form { position: static; }
@@ -124,24 +155,6 @@ body {
 		@include border-radius( 4px );
 		&::-webkit-input-placeholder,
 		&::-moz-placeholder { color: rgba(black, 0.4); }
-	}
-	li > .sub-menu {
-		display: none;
-		position: absolute;
-		top: 35px;
-		background: $yellow;
-		font-size: 14px;
-		line-height: 14px;
-		padding-bottom: 15px;
-		@include border-bottom-radius( 4px );
-		@include box-shadow( 0 2px 2px rgba(black, 0.1) );
-	}
-	li:hover > .sub-menu {
-		display: block;
-	}
-	.sub-menu li {
-		padding: 6px 20px;
-		&:hover { background: $darkyellow; }
 	}
 }
 
