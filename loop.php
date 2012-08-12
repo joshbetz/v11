@@ -8,11 +8,9 @@
         echo "</div>";
         break;
       case 'video':
-        //TODO
         echo wp_oembed_get( get_post_meta( $post->ID, '_format_video_embed', true ) );
         break;
       case 'audio':
-        //TODO
         echo wp_oembed_get( get_post_meta( $post->ID, '_format_audio_embed', true ) );
         break;
     }
