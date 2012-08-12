@@ -218,6 +218,14 @@ article {
 		margin-bottom: 10px;
 	}
 	header { margin-bottom: 40px; }
+	.post-meta {
+		span {
+			margin-right: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 	.date {
 		font-size: 12px;
 		padding: 1px 6px;

@@ -35,7 +35,10 @@
         <?php else: ?>
           <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
         <?php endif; ?>
-        <span class="date"><?php the_time( get_option( 'date_format' ) ); ?></span>
+        <div class="post-meta">
+          <span class="date"><?php the_time( get_option( 'date_format' ) ); ?></span>
+          <span class="shortlink"><?php echo the_shortlink( str_replace( array( 'https://', 'http://' ), '', wp_get_shortlink() ) ); ?></span>
+        </div>
       </header>
     
   <?php endif; ?>
