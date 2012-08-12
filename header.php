@@ -11,10 +11,6 @@
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-	<!-- TypeKit embed code -->
-	<script type="text/javascript" src="//use.typekit.net/hqj1xrn.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 	<?php
 	if ( is_singular() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );

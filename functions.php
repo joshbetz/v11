@@ -16,6 +16,9 @@ class V11_Theme {
 		add_action( 'wp_title', array( $this, 'twentytwelve_wp_title' ), 10, 2 );
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
 		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
+
+		// Print typekit embed scripts
+		add_action( 'print_scripts', array( $this, 'typekit' ) );
 	}
 
 	function init() {
@@ -75,6 +78,12 @@ class V11_Theme {
 		wp_enqueue_script( 'v11search' );
 		wp_enqueue_script( 'fitvids' );
 	}
+
+	function typekit() { ?>
+		<!-- TypeKit embed code -->
+		<script type="text/javascript" src="//use.typekit.net/hqj1xrn.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<?php }
 
 	function twentytwelve_wp_title( $title, $sep ) {
 		global $paged, $page;
