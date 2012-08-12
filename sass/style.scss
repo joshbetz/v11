@@ -303,7 +303,28 @@ pre {
   code { background: transparent; border: 0; padding: 0; }
 }
 
-.wp-post-image { margin-bottom: 20px; }
+.post-thumbnail, .wp-caption a {
+	display: inline-block;
+	margin-bottom: 20px;
+	@include border-radius( 3px );
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 20;
+		@include border-radius( 3px );
+		@include box-shadow( inset 0 0 0 1px rgba(white, 0.15), 0 2px 5px rgba(black, 0.35) );
+	}
+	img {
+		@include border-radius( 3px );
+		width: 100%; height: auto;
+		vertical-align: bottom;
+	}
+}
 
 /* Comments */
 .comments-title {

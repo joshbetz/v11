@@ -3,7 +3,9 @@
   <?php
     switch( get_post_format() ) {
       case 'image':
+        echo "<div class='post-thumbnail'>";
         the_post_thumbnail();
+        echo "</div>";
         break;
       case 'video':
         //TODO
