@@ -449,6 +449,15 @@ pre {
 		}
 	}
 }
+.pingback {
+	p {
+		border: solid 1px $lightgrey;
+		background: $vlightgrey;
+		padding: 14px;
+		font-size: 16px;
+		@include border-radius(4px);
+	}
+}
 
 /* Accessibility */
 .assistive-text { text-indent: -10000px; height: 0; }
