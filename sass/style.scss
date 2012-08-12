@@ -305,6 +305,14 @@ article {
 	}
 }
 
+blockquote {
+	font-size: 18px;
+	font-style: italic;
+	padding: 0 20px;
+	border-left: solid 3px $vlightgrey;
+	margin: 30px 20px;
+}
+
 pre, code {
   font-family: "inconsolata", monospace;
   background-color: #f7f7f9;
