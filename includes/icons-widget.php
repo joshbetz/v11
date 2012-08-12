@@ -61,7 +61,7 @@ class V11_Icons_Widget extends WP_Widget {
 					$field = $this->get_field_name( 'icons' );
 					foreach ( $this->icons as $class => $name ) {
 						$value = !empty( $icons[$class] ) ? $icons[$class] : '';
-						echo "<li><label for='{$class}'><input type=input name='{$field}[$class]' value='{$value}' placeholder='{$name}'></label></li>";
+						echo "<li><label for='{$class}'><input class='widefat' type=input name='{$field}[$class]' value='{$value}' placeholder='{$name}'></label></li>";
 					}
 				?>
 			</ul>
