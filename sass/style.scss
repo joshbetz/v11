@@ -21,6 +21,7 @@ $vlightgrey: #eee;
 $sans: "adelle-sans", sans-serif;
 $serif: "adelle", serif;
 $body: "ff-meta-serif-web-pro", serif;
+$monospace: "inconsolata", Consolas, Monaco, monospace;
 
 * {
 	@include box-sizing( 'border-box' );
@@ -315,7 +316,7 @@ blockquote {
 }
 
 pre, code {
-  font-family: "inconsolata", monospace;
+  font-family: $monospace;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   padding: 2px;
