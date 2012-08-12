@@ -533,16 +533,18 @@ aside { text-align: center; }
 		display: inline-block;
 		text-indent: -10000px;
 	}
-	.twitter { background-position: 0 0; }
-	.dribbble { background-position: -38px 0; }
-	.forrst { background-position: -76px 0; }
-	.github { background-position: -114px 0; }
-	.googleplus { background-position: -152px 0; }
-	.facebook { background-position: -190px 0; }
-	.linkedin { background-position: -228px 0; }
-	.lastfm { background-position: -266px 0; }
-	.skype { background-position: -304px 0; }
-	.flickr { background-position: -342px 0; }
-	.vimeo { background-position: -380px 0; }
+
+	$btnwidth: 38px * -1;
+	.twitter    { background-position: $btnwidth * 0  0; }
+	.dribbble   { background-position: $btnwidth * 1  0; }
+	.forrst     { background-position: $btnwidth * 2  0; }
+	.github     { background-position: $btnwidth * 3  0; }
+	.googleplus { background-position: $btnwidth * 4  0; }
+	.facebook   { background-position: $btnwidth * 5  0; }
+	.linkedin   { background-position: $btnwidth * 6  0; }
+	.lastfm     { background-position: $btnwidth * 7  0; }
+	.skype      { background-position: $btnwidth * 8  0; }
+	.flickr     { background-position: $btnwidth * 9  0; }
+	.vimeo      { background-position: $btnwidth * 10 0; }
 
 }
