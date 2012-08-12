@@ -57,7 +57,6 @@ body {
 }
 
 /* Nav */
-
 #mainnav {
 	font-size: 18px;
 	font-family: $sans;
@@ -173,7 +172,6 @@ body {
 .nav-next { float: right; }
 
 /* Typography */
-
 #sitetitle {
 	margin-bottom: 20px;
 	a {
@@ -204,7 +202,6 @@ h1 {
 }
 
 /* Links */
-
 a {
 	color: blue;
 	&:hover {
@@ -213,7 +210,6 @@ a {
 }
 
 /* Content */
-
 article {
 	margin-bottom: 25px;
 	.single & { margin-bottom: 0; padding-bottom: 0; }
@@ -325,6 +321,13 @@ pre {
 		vertical-align: bottom;
 	}
 }
+.post-thumbnail { width: 100%; }
+.wp-caption-text {
+	font-size: 13px;
+	font-style: italic;
+	color: $lightgrey;
+	text-align: center;
+}
 
 /* Comments */
 .comments-title {
@@ -429,7 +432,6 @@ pre {
 }
 
 /* Accessibility */
-
 .assistive-text { text-indent: -10000px; height: 0; }
 
 /* Bio Widget */
@@ -469,6 +471,7 @@ aside { text-align: center; }
 		color: $lightgrey;
 		margin: 40px 0 10px;
 		line-height: 1.6;
+		font-size: 13px;
 	}
 	&:after {
 		content: "~";
