@@ -35,6 +35,10 @@ $monospace: "inconsolata", Consolas, Monaco, monospace;
 	}
 }
 
+@mixin retina() {
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5) { @content; }
+}
+
 * {
 	@include box-sizing( 'border-box' );
 	position: relative;
