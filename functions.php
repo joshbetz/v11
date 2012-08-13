@@ -8,7 +8,7 @@ include 'includes/icons-widget.php';
  */
 class V11_Theme {
 
-	const VERSION = 1.0;
+	const VERSION = "1.0";
 	
 	function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
