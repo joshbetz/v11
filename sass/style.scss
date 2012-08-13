@@ -96,11 +96,15 @@ body {
 	font-size: 18px;
 	font-family: $sans;
 	height: 60px;
-	background: url(../images/nav-center.png);
+	background-image: url(../images/nav-center.png);
 	position: relative;
 	top: 20px;
 	z-index: 100;
 	font-weight: bold;
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+		background-image: url(../images/nav-center@2x.png);
+		background-size: 1px 60px;
+	}
 	&:before, &:after {
 		content: "";
 		position: absolute;
@@ -114,11 +118,19 @@ body {
 	}
 	&:before {
 		left: -10px;
-		background: url(../images/nav-left.png);
+		background-image: url(../images/nav-left.png);
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+			background-image: url(../images/nav-left@2x.png);
+			background-size: 10px 60px;
+		}
 	}
 	&:after {
 		right: -10px;
-		background: url(../images/nav-right.png);
+		background-image: url(../images/nav-right.png);
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+			background-image: url(../images/nav-right@2x.png);
+			background-size: 10px 60px;
+		}
 	}
 	a {
 		text-decoration: none;	
@@ -490,8 +502,16 @@ pre {
 			content: url(../images/arrow-grey-big.png);
 			left: -52px;
 			top: 20px;
+			@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+				content: url(../images/arrow-grey-big@2x.png);
+			}
 		}
-		&.bypostauthor:before { content: url(../images/arrow-yellow-big.png); }
+		&.bypostauthor:before {
+			content: url(../images/arrow-yellow-big.png);
+			@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+				content: url(../images/arrow-yellow-big@2x.png);
+			}
+		}
 		b {
 			width: 60px;
 			height: 60px;
@@ -517,8 +537,16 @@ pre {
 				content: url(../images/arrow-grey-small.png);
 				left: -46px;
 				top: 24px;
+				@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+					content: url(../images/arrow-grey-small@2x.png);
+				}
 			}
-			&.bypostauthor:before { content: url(../images/arrow-yellow-small.png); }
+			&.bypostauthor:before {
+				content: url(../images/arrow-yellow-small.png);
+				@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+					content: url(../images/arrow-yellow-small@2x.png);
+				}
+			}
 		}
 	}
 }
@@ -592,9 +620,13 @@ aside { text-align: center; }
 	a {
 		height: 33px;
 		width: 33px;
-		background: url(../images/icons.png);
+		background-image: url(../images/icons.png);
 		display: inline-block;
 		text-indent: -10000px;
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+			background-image: url(../images/icons@2x.png);
+			background-size: 37px 33px;
+		}
 	}
 
 	$btnwidth: 38px * -1;
