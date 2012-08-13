@@ -444,6 +444,16 @@ pre {
 .comment {
 	margin: 20px 0;
 	padding: 5px;
+	.comment-reply-link {
+		background: rgba(black, 0.1);
+		padding: 3px 6px;
+		@include border-radius( 3px );
+		color: $grey;
+		text-decoration: none;
+		&:hover {
+			background: rgba(black, 0.2);
+		}
+	}
 	&.bypostauthor {
 		background: $yellow;
 		border: solid 3px $darkyellow;
