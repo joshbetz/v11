@@ -435,6 +435,13 @@ pre {
 	color: $lightgrey;
 	text-align: center;
 }
+.gallery { 
+	img {
+		border-width: 1px !important;
+		padding: 5px;
+		@include box-shadow( 0 0 5px rgba(black, 0.15) );
+	}
+}
 
 /* Comments */
 .comments-title {
