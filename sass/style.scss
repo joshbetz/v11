@@ -23,6 +23,18 @@ $serif: "adelle", serif;
 $body: "ff-meta-serif-web-pro", serif;
 $monospace: "inconsolata", Consolas, Monaco, monospace;
 
+@mixin breakpoint($point) {
+	@if $point == mobile {
+		@media (min-width: 650px) { @content; }
+	}
+	@else if $point == mid {
+		@media (min-width: 800px) { @content; }
+	}
+	@else if $point == large {
+		@media (min-width: 1170px) { @content; }
+	}
+}
+
 * {
 	@include box-sizing( 'border-box' );
 	position: relative;
