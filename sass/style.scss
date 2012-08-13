@@ -48,6 +48,9 @@ body {
 	padding: 40px 5%;
 	font-family: $body;
 	font-size: 14px;
+	@media (max-width: 800px) {
+		padding: 10px 0;
+	}
 }
 
 #main {
@@ -56,18 +59,32 @@ body {
 	border: solid 5px #ccc;
 	@include box-shadow( 0 0 20px rgba(0,0,0,.75) );
 	overflow: hidden;
+	@media (max-width: 800px) {
+		padding: 25px 4%;
+	}
 }
 
 #content {
 	width: 70%;
 	float: left;
 	padding-right: 3%;
+	@media (max-width: 1170px) {
+		width: auto;
+		float: none;
+		padding: 0;
+	}
 }
 
 #sidebar {
+	max-width: 340px;
 	width: 30%;
 	float: right;
 	padding-left: 2%;
+	@media (max-width: 1170px) {
+		width: auto;
+		float: none;
+		padding: 0;
+	}
 }
 
 /* Nav */
@@ -87,6 +104,9 @@ body {
 		width: 10px;
 		display: block;
 		top: 0;
+		@media (max-width: 800px) {
+			display: none;
+		}
 	}
 	&:before {
 		left: -10px;
@@ -105,7 +125,12 @@ body {
 	li {
 		display: inline;
 		border-right: solid 1px $darkyellow;
-		a { padding: 3px 20px; }
+		a {
+			padding: 3px 20px;
+			@media (max-width: 800px) {
+				padding: 3px 10px;
+			}
+		}
 		&:last-child {
 			border-right: 0;
 		}
@@ -157,7 +182,12 @@ body {
 			display: block;
 		}
 	}
-	form { position: static; }
+	form {
+		position: static;
+		@media (max-width: 800px) {
+			display: none;
+		}
+	}
 	#searchbox {
 		position: absolute;
 		top: 9px;
@@ -170,6 +200,10 @@ body {
 		@include border-radius( 4px );
 		&::-webkit-input-placeholder,
 		&::-moz-placeholder { color: rgba(black, 0.4); }
+	}
+	@media (max-width:800px) {
+		font-size: 14px;
+		text-align: center;
 	}
 }
 
@@ -210,6 +244,14 @@ body {
 			color: $darkyellow;
 		}
 		&:active { top: 1px; }
+		@media (max-width: 800px) {
+			font-size: 32px;
+			margin-top: 10px;
+		}
+	}
+	@media (max-width: 800px) {
+		margin-bottom: 0;
+		margin-left: 10px;
 	}
 }
 
