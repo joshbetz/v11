@@ -6,7 +6,6 @@
 <head>
 	<meta charset="utf-8">
 	<title><?php wp_title( ' &mdash; ', true, 'right' ); ?></title>
-	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 	
 	<?php
