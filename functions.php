@@ -1,7 +1,7 @@
 <?php
 
-require 'includes/bio-widget.php';
-require 'includes/icons-widget.php';
+include 'includes/bio-widget.php';
+include 'includes/icons-widget.php';
 
 /**
  * V11 Theme
