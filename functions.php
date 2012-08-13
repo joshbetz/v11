@@ -30,6 +30,7 @@ class V11_Theme {
 		add_filter( 'nav_menu_css_class', array( $this, 'menu_item_has_children' ), 10, 3 );
 		add_filter( 'wp_page_menu_args', array( $this, 'home_page_menu_item' ) );
 
+		// Run the CF Post Formats plugin if it's not already active
 		if ( ! defined( 'CFPF_VERSION' ) ) {
 			include 'includes/cf_post_formats/cf-post-formats.php';
 			add_filter( 'cfpf_base_url', function() { return get_template_directory_uri() . '/includes/cf_post_formats'; } );
