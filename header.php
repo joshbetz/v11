@@ -8,9 +8,7 @@
 	<title><?php wp_title( ' &mdash; ', true, 'right' ); ?></title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
+	
 	<?php
 	if ( is_singular() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
