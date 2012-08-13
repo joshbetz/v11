@@ -475,14 +475,9 @@ pre {
 		}
 	}
 	header { margin-bottom: 0; }
-	b {
-		@include border-radius( 40px );
-		border: solid 5px rgba(black, 0.1);
-		width: 80px;
-		height: 80px;
-		display: inline-block;
-	}
 	.avatar {
+		margin: 5px;
+		@include box-shadow( 0 0 0 5px rgba(black, 0.1) );
 		@include border-radius( 35px );
 	}
 	cite {
@@ -533,10 +528,6 @@ pre {
 			@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
 				content: url(../images/arrow-yellow-big@2x.png);
 			}
-		}
-		b {
-			width: 60px;
-			height: 60px;
 		}
 		.avatar {
 			width: 50px;
@@ -591,14 +582,8 @@ aside { text-align: center; }
 	clear: both;
 	font-family: $serif;
 	margin-bottom: 30px;
-	b {
-		border: solid 5px rgba(black, 0.1);
-		display: inline-block;
-		width: 112px;
-		height: 112px;
-		@include border-radius( 56px );
-	}
 	img {
+		@include box-shadow( 0 0 0 5px rgba(black, 0.1) );
 		@include border-radius( 51px );
 	}
 	.name {

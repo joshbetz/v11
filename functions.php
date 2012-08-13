@@ -218,7 +218,7 @@ function v11_comment( $comment, $args, $depth ) {
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<header class="comment-meta comment-author vcard">
 				<?php
-					echo "<b>" . get_avatar( $comment, 70 ) . "</b>";
+					echo get_avatar( $comment, 70 );
 					printf( '<cite class="fn">%1$s</cite>', get_comment_author_link() );
 
 					$datetime = time() - strtotime( get_comment_time( 'c' ) ) < 86400 ? human_time_diff( strtotime( get_comment_time( 'c' ) ) ) . ' ago' : get_comment_date();

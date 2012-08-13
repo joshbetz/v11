@@ -19,7 +19,7 @@ class V11_Bio_Widget extends WP_Widget {
 		echo $before_widget;
 		echo "<div class='name'>";
 		echo "<span class='first-name'>" . $first_name . "</span>";
-		echo "<b>" . get_avatar( $email, 102 ) . "</b>";
+		echo get_avatar( $email, 102 );
 		echo "<span class='last-name'>" . $last_name . "</span>";
 		echo "</div>";
 		echo "<div class='bio'>" . $author->description . "</span>";
