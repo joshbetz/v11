@@ -37,7 +37,6 @@ class V11_Theme {
 	}
 
 	function theme_setup() {
-		//TODO: add editor style
 		// This theme styles the visual editor with editor-style.css to match the theme style.
 		add_editor_style();
 
