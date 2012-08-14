@@ -41,8 +41,10 @@
     
   <?php endif; ?>
 
-  <div class="article">
-    <?php the_content( __( '<p class="readmore">Continue reading <span class="meta-nav">&rarr;</span></p>', 'v11' ) ); ?>
-  </div>
+  <?php if ( ! is_search() ): ?>
+    <div class="article">
+      <?php the_content( __( '<p class="readmore">Continue reading <span class="meta-nav">&rarr;</span></p>', 'v11' ) ); ?>
+    </div>
+  <?php endif; ?>
 
 </article>
