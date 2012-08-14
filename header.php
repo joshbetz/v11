@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
 	<title><?php wp_title( ' &mdash; ', true, 'right' ); ?></title>
 	<meta name="viewport" content="width=device-width">
+	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 	
 	<?php
 	if ( is_singular() && get_option( 'thread_comments' ) )
