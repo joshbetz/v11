@@ -45,6 +45,10 @@
 		<div class="article">
 			<?php the_content( __( '<p class="readmore">Continue reading <span class="meta-nav">&rarr;</span></p>', 'v11' ) ); ?>
 		</div>
+	<?php else: ?>
+		<div class="article">
+			<?php the_excerpt(); ?>
+		</div>
 	<?php endif; ?>
 
 </article>
