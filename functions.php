@@ -56,27 +56,16 @@ class V11_Theme {
 	}
 
 	function enqueue_scripts() {
-		wp_register_style( 'v11', get_stylesheet_directory_uri() . '/css/style.css', false, self::VERSION );
-		wp_enqueue_style( 'v11' );
+		wp_enqueue_style( 'v11', get_template_directory_uri() . '/css/style.css', false, self::VERSION );
 
-		wp_register_script( 'v11', get_stylesheet_directory_uri() . '/js/site.js', array( 'jquery', 'prettyprint', 'fitvids' ), self::VERSION, true );
-		wp_enqueue_script( 'v11' );
+		wp_enqueue_script( 'v11', get_stylesheet_directory_uri() . '/js/site.js', array( 'jquery', 'prettyprint', 'fitvids' ), self::VERSION, true );
 
-		wp_register_script( 'prettyprint', get_stylesheet_directory_uri() . '/js/google-code-prettify/prettify.js', false, false, true );
-		wp_register_style( 'prettyprint', get_stylesheet_directory_uri() . '/js/google-code-prettify/prettify.css' );
-		wp_enqueue_script( 'prettyprint' );
-		wp_enqueue_style( 'prettyprint' );
-		
-		wp_register_script( 'html5shiv', get_stylesheet_directory_uri() . '/js/html5shiv.js' );
-		wp_register_script( 'googlecse', 'http://www.google.com/jsapi', false, false, true );
-		wp_register_script( 'v11search', get_stylesheet_directory_uri() . '/js/google-search.js', array( 'googlecse' ), self::VERSION, true );
-		wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'prettyprint', get_stylesheet_directory_uri() . '/js/google-code-prettify/prettify.js', false, false, true );
+		wp_enqueue_style( 'prettyprint', get_stylesheet_directory_uri() . '/js/google-code-prettify/prettify.css' );
 
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'html5shiv' );
-		wp_enqueue_script( 'googlecse' );
-		wp_enqueue_script( 'v11search' );
-		wp_enqueue_script( 'fitvids' );
+		wp_enqueue_script( 'html5shiv', get_stylesheet_directory_uri() . '/js/html5shiv.js' );
+		wp_enqueue_script( 'fitvids', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), false, true );
 	}
 
 	function typekit() { ?>
