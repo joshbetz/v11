@@ -361,6 +361,10 @@ article {
 	font-size: 12px;
 	padding: 10px;
 	color: $grey;
+	a {
+		color: $grey;
+		font-weight: bold;
+	}
 }
 .footer-left {
 	text-align: left;
@@ -490,28 +494,25 @@ pre {
 		top: 5px; left: 100px;
 		font-size: 20px;
 		font-weight: bold;
-		color: black;
-		
+		a {
+			color: black;
+		}
 	}
 	.date {
 		position: absolute;
 		top: 0; right: 0;
 		background: transparent;
 		font-weight: bold;
-		text-decoration: none;
 		padding: 3px 0;
+		color: black;
 		@include border-radius( 0 );
 		@media (max-width: 800px) {
 			right: auto;
-			top: 20px;
-			left: 100px;
+			left: 0;
+			top: 80px;
+			width: 80px;
+			text-align: center;
 		}
-	}
-	.date, cite a {
-		color: black;
-		text-decoration: none;
-		border-bottom: solid 1px $lightgrey;
-		&:hover { border-color: black; }
 	}
 	.comment-content {
 		margin-left: 100px;
@@ -551,7 +552,8 @@ pre {
 		}
 		.date {
 			@media (max-width: 800px) {
-				left: 80px;
+				width: 60px;
+				top: 60px;
 			}
 		}
 		.comment-content {
