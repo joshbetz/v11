@@ -218,7 +218,7 @@ body {
 		&::-webkit-input-placeholder,
 		&::-moz-placeholder { color: rgba(black, 0.4); }
 	}
-	@media (max-width:800px) {
+	@media (max-width:650px) {
 		font-size: 14px;
 		padding: 0 5px;
 	}
@@ -501,6 +501,11 @@ pre {
 		text-decoration: none;
 		padding: 3px 0;
 		@include border-radius( 0 );
+		@media (max-width: 800px) {
+			right: auto;
+			top: 20px;
+			left: 100px;
+		}
 	}
 	.date, cite a {
 		color: black;
@@ -516,6 +521,9 @@ pre {
 }
 .children {
 	margin-left: 100px;
+	@media (max-width: 800px) {
+		margin-left: 50px;
+	}
 	li.comment {
 		&:before {
 			position: absolute;
@@ -541,6 +549,11 @@ pre {
 			left: 80px;
 			font-size: 16px;
 		}
+		.date {
+			@media (max-width: 800px) {
+				left: 80px;
+			}
+		}
 		.comment-content {
 			margin-left: 80px;
 			margin-top: -30px;
@@ -548,6 +561,9 @@ pre {
 	}
 	.children {
 		margin-left: 80px;
+		@media (max-width: 800px) {
+			margin-left: 45px;
+		}
 		li.comment {
 			&:before {
 				content: url(../images/arrow-grey-small.png);
