@@ -576,15 +576,28 @@ pre {
 	}
 }
 
+/* Sidebar Widgets */
+aside {
+	margin: 40px 0;
+	h1 {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	li, p {
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+}
+
 /* Accessibility */
 .assistive-text { text-indent: -10000px; height: 0; }
 
 /* Bio Widget */
-aside { text-align: center; }
 .widget_v11_bio_widget {
+	text-align: center;
 	clear: both;
 	font-family: $serif;
-	margin-bottom: 30px;
+	margin: 0 0 30px 0;
 	img {
 		@include box-shadow( 0 0 0 5px rgba(black, 0.1) );
 		@include border-radius( 51px );
@@ -623,7 +636,8 @@ aside { text-align: center; }
 
 /* Icons Widget */
 .widget_v11_icons_widget {
-	margin-bottom: 20px;
+	text-align: center;
+	margin-bottom: 0 0 20px 0;
 	li {
 		display: inline-block;	
 		margin: 8px;
