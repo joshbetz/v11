@@ -504,7 +504,7 @@ pre {
 	header { margin-bottom: 0; }
 	.avatar {
 		margin: 5px;
-		@include box-shadow( 0 0 0 5px rgba(black, 0.1) );
+		@include box-shadow( 0 0 0 5px $lgrey );
 		@include border-radius( 35px );
 	}
 	.date {
@@ -649,7 +649,7 @@ aside {
 	font-family: $serif;
 	margin: 0 0 30px 0;
 	img {
-		@include box-shadow( 0 0 0 5px rgba(black, 0.1) );
+		@include box-shadow( 0 0 0 5px $lgrey );
 		@include border-radius( 51px );
 	}
 	.name {
