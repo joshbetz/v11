@@ -10,9 +10,9 @@
 $yellow: #f8d533;
 $darkyellow: #dcb606;
 
-$grey: #333;
-$lightgrey: #aaa;
-$vlightgrey: #eee;
+$dgrey: #454545;
+$grey: #ccc;
+$lgrey: #eee;
 
 $sans: "adelle-sans", sans-serif;
 $serif: "adelle", serif;
@@ -258,10 +258,10 @@ body {
 		background: lightgrey;
 		text-decoration: none;
 		display: inline-block;
-		color: $grey;
+		color: $dgrey;
 		@include border-radius( 4px );
 		&:hover {
-			background: $vlightgrey;
+			background: $lgrey;
 		}
 	}
 }
@@ -299,7 +299,7 @@ h1, h2, h3 {
 		color: black;
 		text-decoration: none;
 		@include text-shadow( rgba(black, 0.2) 0 1px 0 );
-		&:hover { color: $lightgrey; }
+		&:hover { color: $grey; }
 	}
 }
 
@@ -336,7 +336,7 @@ article {
 		font-size: 12px;
 		padding: 1px 6px;
 		margin: 5px 0;
-		background: lightgrey;
+		background: $grey;
 		@include border-radius( 3px );
 	}
 
@@ -357,7 +357,7 @@ article {
 	&:last-child { margin-bottom: 0; }
 	&:after {
 		content: "~";
-		color: $vlightgrey;
+		color: $lgrey;
 		font-size: 100px;
 		text-align: center;
 		font-family: "Baskerville", serif;
@@ -381,9 +381,9 @@ article {
 #footer {
 	font-size: 12px;
 	padding: 10px;
-	color: $grey;
+	color: $dgrey;
 	a {
-		color: $grey;
+		color: $dgrey;
 		font-weight: bold;
 	}
 }
@@ -397,7 +397,7 @@ article {
 	font-size: 12px;
 	hr {
 		border: 0;
-		border-top: solid 1px $vlightgrey;
+		border-top: solid 1px $lgrey;
 	}
 	ol {
 		padding: 5px 20px;
@@ -408,7 +408,7 @@ blockquote {
 	font-size: 18px;
 	font-style: italic;
 	padding: 0 20px;
-	border-left: solid 3px $vlightgrey;
+	border-left: solid 3px $lgrey;
 	margin: 30px 20px;
 	@media (max-width: 800px) {
 		font-size: 16px;
@@ -455,7 +455,7 @@ pre {
 .wp-caption-text {
 	font-size: 13px;
 	font-style: italic;
-	color: $lightgrey;
+	color: $grey;
 	text-align: center;
 }
 .gallery { 
@@ -487,7 +487,7 @@ pre {
 		background: rgba(black, 0.1);
 		padding: 3px 6px;
 		@include border-radius( 3px );
-		color: $grey;
+		color: $dgrey;
 		text-decoration: none;
 		&:hover {
 			background: rgba(black, 0.2);
@@ -607,8 +607,8 @@ pre {
 }
 .pingback {
 	p {
-		border: solid 1px $lightgrey;
-		background: $vlightgrey;
+		border: solid 1px $grey;
+		background: $lgrey;
 		padding: 14px;
 		font-size: 16px;
 	}
@@ -659,14 +659,14 @@ aside {
 	}
 	.bio {
 		font-style: italic;
-		color: $lightgrey;
+		color: $grey;
 		margin: 40px 0 10px;
 		line-height: 1.6;
 		font-size: 13px;
 	}
 	&:after {
 		content: "~";
-		color: $vlightgrey;
+		color: $lgrey;
 		font-size: 100px;
 		font-family: "Baskerville", serif;
 	}
