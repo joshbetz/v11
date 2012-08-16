@@ -248,7 +248,6 @@ body {
 @mixin smallnavlinks() {
 	text-transform: uppercase;
 	background: $lgrey;
-	padding: 5px 10px;
 	@include border-radius( 3px );
 	color: $dgrey;
 	text-decoration: none;
@@ -263,6 +262,7 @@ body {
 }
 .nav-previous, .nav-next {
 	& a {
+		padding: 7px 10px;
 		@include smallnavlinks();
 	}
 }
@@ -488,6 +488,7 @@ pre {
 	margin: 20px 0;
 	padding: 5px;
 	.comment-reply-link {
+		padding: 5px 10px;
 		@include smallnavlinks();
 	}
 	&.bypostauthor {
