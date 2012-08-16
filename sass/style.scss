@@ -245,19 +245,25 @@ body {
 	font-size: 12px;
 	margin-bottom: 100px;
 }
+@mixin smallnavlinks() {
+	text-transform: uppercase;
+	background: rgba(black, 0.1);
+	padding: 5px 10px;
+	@include border-radius( 3px );
+	color: $dgrey;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-family: $sans;
+	display: inline-block;
+	&:hover {
+		background: rgba(black, 0.2);
+	}
+}
 .nav-previous, .nav-next {
 	& a {
-		padding: 0 8px;
-		height: 26px;
-		line-height: 26px;
-		background: lightgrey;
-		text-decoration: none;
-		display: inline-block;
-		color: $dgrey;
-		@include border-radius( 4px );
-		&:hover {
-			background: $lgrey;
-		}
+		@include smallnavlinks();
 	}
 }
 .nav-previous { float: left; }
@@ -477,14 +483,7 @@ pre {
 	margin: 20px 0;
 	padding: 5px;
 	.comment-reply-link {
-		background: rgba(black, 0.1);
-		padding: 3px 6px;
-		@include border-radius( 3px );
-		color: $dgrey;
-		text-decoration: none;
-		&:hover {
-			background: rgba(black, 0.2);
-		}
+		@include smallnavlinks();
 	}
 	&.bypostauthor {
 		background: $yellow;
