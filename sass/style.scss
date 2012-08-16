@@ -247,7 +247,7 @@ body {
 }
 @mixin smallnavlinks() {
 	text-transform: uppercase;
-	background: rgba(black, 0.1);
+	background: $lgrey;
 	padding: 5px 10px;
 	@include border-radius( 3px );
 	color: $dgrey;
@@ -258,7 +258,7 @@ body {
 	font-family: $sans;
 	display: inline-block;
 	&:hover {
-		background: rgba(black, 0.2);
+		background: $grey;
 	}
 }
 .nav-previous, .nav-next {
@@ -316,6 +316,15 @@ a {
 	}
 }
 
+/* dates */
+.date {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: $dgrey;
+	@include border-radius( 3px );
+}
+
 /* Content */
 article {
 	margin-bottom: 25px;
@@ -333,14 +342,6 @@ article {
 			}
 		}
 	}
-	.date {
-		font-size: 12px;
-		padding: 1px 6px;
-		margin: 5px 0;
-		background: $grey;
-		@include border-radius( 3px );
-	}
-
 	p, pre, ul, ol, video, embed, audio {
 		margin-bottom: 20px;
 	}
@@ -354,7 +355,11 @@ article {
 		vertical-align: super;
 		font-size: 12px;
 	}
-	
+	.date {
+		padding: 3px 6px;
+		margin: 5px 0;
+		background: $lgrey;
+	}
 	&:last-child { margin-bottom: 0; }
 	&:after {
 		content: "~";
@@ -502,6 +507,15 @@ pre {
 		@include box-shadow( 0 0 0 5px rgba(black, 0.1) );
 		@include border-radius( 35px );
 	}
+	.date {
+		background: transparent;
+		text-transform: uppercase;
+		position: absolute;
+		top: 0; right: 0;
+		&:hover {
+			color: $darkyellow;
+		}
+	}
 	cite {
 		position: absolute;
 		top: 5px; left: 100px;
@@ -509,22 +523,6 @@ pre {
 		font-weight: bold;
 		a {
 			color: black;
-		}
-	}
-	.date {
-		position: absolute;
-		top: 0; right: 0;
-		background: transparent;
-		font-weight: bold;
-		padding: 3px 0;
-		color: black;
-		@include border-radius( 0 );
-		@media (max-width: 800px) {
-			right: auto;
-			left: 0;
-			top: 80px;
-			width: 80px;
-			text-align: center;
 		}
 	}
 	.comment-content {
@@ -562,12 +560,6 @@ pre {
 		cite {
 			left: 80px;
 			font-size: 16px;
-		}
-		.date {
-			@media (max-width: 800px) {
-				width: 60px;
-				top: 60px;
-			}
 		}
 		.comment-content {
 			margin-left: 80px;
