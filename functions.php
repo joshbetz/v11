@@ -228,7 +228,7 @@ function v11_comment( $comment, $args, $depth ) {
 			<section class="comment-content">
 				<?php comment_text(); ?>
 				<?php edit_comment_link( __( 'Edit', 'v11' ), '<p class="edit-link">', '</p>' ); ?>
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'v11' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'v11' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</section>
 
 		</article><!-- #comment-## -->
