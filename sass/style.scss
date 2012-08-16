@@ -613,6 +613,34 @@ pre {
 	}
 }
 
+/* Comment Form */
+#respond {
+	h3 {
+		font-size: 24px;
+		small {
+			position: absolute;
+			right: 0;
+			font-size: 14px;
+		}
+	}
+	p { margin: 20px 0; }
+	.required { position: absolute; }
+	input, textarea { border: solid 1px $grey; }
+	input, label { font-size: 16px; }
+	label { font-weight: bold; width: 70px; display: block; }
+	input { padding: 4px; }
+	textarea {
+		font-size: 14px;
+		line-height: 1.4;
+		padding: 8px;
+		width: 100%;
+		resize: vertical;
+	}
+	.comment-notes { font-size: 12px; font-style: italic; color: $grey; }
+	.form-allowed-tags { display: none; }
+	.form-submit input { padding: 8px; background: $grey; @include border-radius( 4px ); cursor: pointer; }
+}
+
 /* Sidebar Widgets */
 aside {
 	margin: 40px 0;
