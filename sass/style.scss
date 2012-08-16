@@ -391,6 +391,10 @@ article {
 	a {
 		color: $dgrey;
 		font-weight: bold;
+		text-decoration: none;
+		&:hover {
+			color: #666;
+		}
 	}
 }
 .footer-left {
