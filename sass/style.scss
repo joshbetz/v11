@@ -226,11 +226,12 @@ body {
 			&::-moz-placeholder { color: rgba(black, 0.3); }
 		}
 		@media (max-width: 800px) {
-			top: -45px;
+			top: -40px;
 			left: 50%;
 			right: auto;
 			margin-left: -100px;
 			width: 200px;
+			font-size: 14px;
 			&[value=""] { max-width: 200px; }
 			background: rgba(white, 0.9);
 		}
