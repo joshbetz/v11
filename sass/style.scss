@@ -27,8 +27,12 @@ $monospace: "inconsolata", Consolas, Monaco, monospace;
 
 @mixin retina() {
 	@media
-	only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (min-device-pixel-ratio: 1.5) { @content; }
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) { @content; }
 }
 
 * {
@@ -96,7 +100,7 @@ body {
 	top: 20px;
 	z-index: 100;
 	font-weight: bold;
-	@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 		background-image: url(../images/nav-center@2x.png);
 		background-size: 1px 60px;
 	}
@@ -114,7 +118,7 @@ body {
 	&:before {
 		left: -10px;
 		background-image: url(../images/nav-left.png);
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 			background-image: url(../images/nav-left@2x.png);
 			background-size: 10px 60px;
 		}
@@ -122,7 +126,7 @@ body {
 	&:after {
 		right: -10px;
 		background-image: url(../images/nav-right.png);
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 			background-image: url(../images/nav-right@2x.png);
 			background-size: 10px 60px;
 		}
@@ -543,13 +547,13 @@ pre {
 			content: url(../images/arrow-grey-big.png);
 			left: -52px;
 			top: 20px;
-			@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+			@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 				content: url(../images/arrow-grey-big@2x.png);
 			}
 		}
 		&.bypostauthor:before {
 			content: url(../images/arrow-yellow-big.png);
-			@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+			@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 				content: url(../images/arrow-yellow-big@2x.png);
 			}
 		}
@@ -577,13 +581,13 @@ pre {
 				content: url(../images/arrow-grey-small.png);
 				left: -46px;
 				top: 24px;
-				@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+				@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 					content: url(../images/arrow-grey-small@2x.png);
 				}
 			}
 			&.bypostauthor:before {
 				content: url(../images/arrow-yellow-small.png);
-				@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+				@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 					content: url(../images/arrow-yellow-small@2x.png);
 				}
 			}
@@ -699,7 +703,7 @@ aside {
 		background-image: url(../images/icons.png);
 		display: inline-block;
 		text-indent: -10000px;
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 			background-image: url(../images/icons@2x.png);
 			background-size: 413px 33px;
 		}
