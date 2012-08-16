@@ -494,7 +494,8 @@ pre {
 .comment {
 	margin: 20px 0;
 	padding: 5px;
-	.comment-reply-link {
+	.edit-link { display: inline; }
+	.comment-reply-link, .comment-edit-link {
 		padding: 5px 10px;
 		@include smallnavlinks();
 	}
