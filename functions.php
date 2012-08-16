@@ -18,7 +18,7 @@ class V11_Theme {
 		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
 
 		// Print typekit embed scripts
-		add_action( 'print_scripts', array( $this, 'typekit' ) );
+		add_action( 'wp_print_scripts', array( $this, 'typekit' ) );
 	}
 
 	function init() {
@@ -52,6 +52,11 @@ class V11_Theme {
 
 		// This theme uses wp_nav_menu() for the main nav.
 		register_nav_menu( 'primary', __( 'Primary Menu', 'v11' ) );
+
+		// Add support for custom background.
+		add_theme_support( 'custom-background', array(
+			'default-image' => get_template_directory_uri() . '/images/bg.png',
+		) );
 	}
 
 	function enqueue_scripts() {
