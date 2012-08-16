@@ -23,7 +23,6 @@ class V11_Theme {
 
 	function init() {
 		add_filter( 'the_title', array( $this, 'remove_widows' ) );
-		add_action( 'pre_get_posts', array( $this, 'remove_twitter_cat' ) );
 		add_filter( 'post_link', array( $this, 'link_post_links' ) );
 		add_filter( 'the_permalink', array( $this, 'link_permalinks' ) );
 		add_filter( 'the_title', array( $this, 'link_titles' ), 10, 2 );
@@ -131,17 +130,6 @@ class V11_Theme {
 		}
 
 		return $title;
-	}
-
-	function remove_twitter_cat(){
-		global $wp_query;
-
-		// Figure out if we need to exclude twitter - exclude from
-		// archives (except category archives), feeds, and home page
-		if( is_home() || is_feed() || ( is_admin() && isset( $_REQUEST['cat'] ) && $_REQUEST['cat'] != '14' ) ||
-				( is_archive() && !is_category() ) ) {
-			 $wp_query->query_vars['cat'] = '-14';
-		}
 	}
 
 	function link_post_links( $link ) {
