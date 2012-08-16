@@ -33,7 +33,7 @@ class V11_Icons_Widget extends WP_Widget {
 		if ( count( $icons > 0 ) ) {
 			echo "<ul>";
 			foreach( $icons as $icon => $link )
-				echo "<li><a class='{$icon}' href='{$link}'>{$translations[$icon]}</a></li>";
+				echo "<li><a class='{$icon}' title='Find me on {$translations[$icon]}' href='{$link}'>{$translations[$icon]}</a></li>";
 			echo "</ul>";
 		}
 		echo $after_widget;
