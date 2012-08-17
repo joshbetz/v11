@@ -79,8 +79,30 @@ class V11_Theme {
 	}
 
 	function customizer($theme) {
+		$theme->add_section( 'fonts', array(
+			'title' => 'Fonts',
+			'priority' => 35
+		) );
+		$theme->add_setting( 'cardo', array(
+			'default' => false
+		) );
+		$theme->add_control( 'cardo', array(
+			'label' => 'Enable the Cardo typeface.',
+			'section' => 'fonts',
+			'type' => 'checkbox'
+		) );
+		$theme->add_setting( 'tinos', array(
+			'default' => false
+		) );
+		$theme->add_control( 'tinos', array(
+			'label' => 'Enable the Tinos typeface.',
+			'section' => 'fonts',
+			'type' => 'checkbox'
+		) );
+
 		$theme->add_section( 'legal', array(
-			'title' => 'Legal'
+			'title' => 'Legal',
+			'priority' => 35
 		) );
 		$theme->add_setting( 'copyright', array(
 			'default' => '&copy; {yyyy}'

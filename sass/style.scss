@@ -8,9 +8,9 @@ $dgrey: #454545;
 $grey: rgba(black, 0.2);
 $lgrey: rgba(black, 0.1);
 
-$sans: "adelle-sans", sans-serif;
-$serif: "adelle", serif;
-$body: "ff-meta-serif-web-pro", serif;
+$sans: "adelle-sans", "Helvetica", sans-serif;
+$serif: "adelle", "Tinos", "Georgia", serif;
+$body: "ff-meta-serif-web-pro", "Cardo", "Baskerville", serif;
 $monospace: "inconsolata", Consolas, Monaco, monospace;
 
 @mixin breakpoint($point) {
