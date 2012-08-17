@@ -21,6 +21,7 @@ class V11_Theme {
 		add_action( 'wp_print_scripts', array( $this, 'typekit' ) );
 
 		add_action( 'admin_menu', array( $this, 'customizer_menu' ) );
+		add_action( 'customize_register', array( $this, 'customizer' ) );
 	}
 
 	function init() {
@@ -77,6 +78,20 @@ class V11_Theme {
 
 	function customizer_menu() {
 		add_theme_page( __( 'Customize' ), __( 'Customize' ), 'edit_theme_options', 'customize.php' );
+	}
+
+	function customizer($theme) {
+		$theme->add_section( 'legal', array(
+			'title' => 'Legal'
+		) );
+		$theme->add_setting( 'copyright', array(
+			'default' => '&copy; {yyyy}'
+		) );
+		$theme->add_control( 'copyright', array(
+			'label' => 'Copyright Notice',
+			'section' => 'legal',
+			'type' => 'text'
+		) );
 	}
 
 	function typekit() { ?>
