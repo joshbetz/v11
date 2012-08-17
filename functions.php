@@ -17,9 +17,7 @@ class V11_Theme {
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
 		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
 
-		// Print typekit embed scripts
-		add_action( 'wp_print_scripts', array( $this, 'typekit' ) );
-
+		// Set up the customizer
 		add_action( 'admin_menu', array( $this, 'customizer_menu' ) );
 		add_action( 'customize_register', array( $this, 'customizer' ) );
 	}
@@ -93,12 +91,6 @@ class V11_Theme {
 			'type' => 'text'
 		) );
 	}
-
-	function typekit() { ?>
-		<!-- TypeKit embed code -->
-		<script type="text/javascript" src="//use.typekit.net/hqj1xrn.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-<?php }
 
 	function twentytwelve_wp_title( $title, $sep ) {
 		global $paged, $page;
