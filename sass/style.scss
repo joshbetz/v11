@@ -400,12 +400,14 @@ article {
 			color: #666;
 		}
 	}
+	span { max-width: 50%; }
 }
 .footer-left {
 	text-align: left;
 }
 .footer-right {
 	float: right;
+	text-align: right;
 }
 .footnotes {
 	font-size: 12px;
