@@ -19,6 +19,8 @@ class V11_Theme {
 
 		// Print typekit embed scripts
 		add_action( 'wp_print_scripts', array( $this, 'typekit' ) );
+
+		add_action( 'admin_menu', array( $this, 'customizer_menu' ) );
 	}
 
 	function init() {
@@ -71,6 +73,10 @@ class V11_Theme {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js' );
 		wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), false, true );
+	}
+
+	function customizer_menu() {
+		add_theme_page( __( 'Customize' ), __( 'Customize' ), 'edit_theme_options', 'customize.php' );
 	}
 
 	function typekit() { ?>
