@@ -533,6 +533,14 @@ pre {
 		top: 5px; left: 100px;
 		font-size: 20px;
 		font-weight: bold;
+		a {
+			color: #222;
+			text-decoration: none;
+			border-bottom: solid 1px $lgrey;
+			&:hover {
+				border-color: $grey;
+			}
+		}
 	}
 	.comment-content {
 		margin-left: 100px;
