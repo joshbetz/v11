@@ -486,6 +486,7 @@ pre {
 }
 .commentlist {
 	#respond {
+		margin-top: 0;
 		margin-left: 110px;
 	}
 	.children {
@@ -656,6 +657,7 @@ input {
 }
 /* Comment Form */
 #respond {
+	margin-top: 50px;
 	h3 {
 		font-size: 24px;
 		small {
