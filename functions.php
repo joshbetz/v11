@@ -240,7 +240,7 @@ function v11_comment( $comment, $args, $depth ) {
 					echo get_avatar( $comment, 70 );
 					printf( '<cite class="fn">%1$s</cite>', get_comment_author_link() );
 
-					$datetime = time() - strtotime( get_comment_time( 'c' ) ) < 86400 ? human_time_diff( strtotime( get_comment_time( 'c' ) ) ) . ' ago' : get_comment_date();
+					$datetime = time() - get_comment_time( 'U' ) < 86400 ? human_time_diff( get_comment_time( 'U' ) ) . ' ago' : get_comment_date();
 					printf( '<a class="date" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 						esc_url( get_comment_link( $comment->comment_ID ) ),
 						get_comment_time( 'c' ),
