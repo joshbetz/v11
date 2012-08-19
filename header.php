@@ -26,13 +26,7 @@
 			<h1 id="sitetitle"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 			<?php if ( has_nav_menu( 'primary' ) ): ?>
 				<nav id="mainnav">
-					<?php
-						$opts = array(
-							'theme_location' => 'primary',
-							'container' => '',
-						);
-						wp_nav_menu( $opts );
-					?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
 					<form action="<?php echo home_url(); ?>">
 						<input id="searchbox" name="s" type=type placeholder="Search..." value="<?php if ( isset( $_REQUEST['s'] ) ) echo esc_attr( $_REQUEST['s'] ); ?>">
 					</form>
