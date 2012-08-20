@@ -35,7 +35,7 @@
 				<?php endif; ?>
 				<div class="post-meta">
 					<span class="date"><?php the_time( get_option( 'date_format' ) ); ?></span>
-					<span class="shortlink"><?php echo the_shortlink( str_replace( array( 'https://', 'http://' ), '', wp_get_shortlink( get_the_ID() ) ) ); ?></span>
+					<span class="shortlink"><?php echo the_shortlink(); ?></span>
 				</div>
 			</header>
 		
