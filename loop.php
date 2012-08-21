@@ -44,6 +44,7 @@
 	<?php if ( ! is_search() ): ?>
 		<div class="article">
 			<?php the_content( __( '<p class="readmore">Continue reading <span class="meta-nav">&#10095;</span></p>', 'v11' ) ); ?>
+			<?php wp_link_pages(); ?>
 		</div>
 	<?php else: ?>
 		<div class="article">
