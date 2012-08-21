@@ -333,6 +333,7 @@ a {
 /* Content */
 article {
 	margin-bottom: 25px;
+	overflow: hidden;
 	.single & { margin-bottom: 0; }
 	h1 {
 		font-size: 26px;
@@ -347,6 +348,7 @@ article {
 			}
 		}
 	}
+	img { max-width: 100%; }
 	p, pre, ul, ol, video, embed, audio {
 		margin-bottom: 20px;
 	}
