@@ -7,7 +7,7 @@
 			<h1>404: Four oh Four.</h1>
 		</header>
 		<div class="article">
-			<p>It seems you've reached a page that doesn't exist. Try using the search form below.</p>
+			<p><?php _e( "It seems you've reached a page that doesn't exist. Try using the search form below.", 'v11' ); ?></p>
 			<form action="<?php echo home_url(); ?>">
 				<input type=text name=s> <input type=submit value="Search">
 			</form>

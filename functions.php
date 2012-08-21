@@ -77,7 +77,7 @@ class V11_Theme {
 	}
 
 	function customizer_menu() {
-		add_theme_page( __( 'Customize' ), __( 'Customize' ), 'edit_theme_options', 'customize.php' );
+		add_theme_page( __( 'Customize', 'v11' ), __( 'Customize', 'v11' ), 'edit_theme_options', 'customize.php' );
 	}
 
 	function customizer($theme) {
