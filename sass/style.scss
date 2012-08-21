@@ -513,15 +513,13 @@ table {
 		@include box-shadow( 0 0 5px rgba(black, 0.15) );
 	}
 }
-.gallery-caption {
-	/*TODO*/
-}
+.gallery-caption {}
 
 .aligncenter { margin: 0 auto; }
 .alignleft { float: left; margin: 10px }
 .alignright { float: right; margin: 10px; }
 
-.sticky { /* nothing */ }
+.sticky {}
 
 /* Comments */
 .comments-title {
