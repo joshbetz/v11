@@ -24,13 +24,11 @@
 	<div id="wrap">
 		<header id="header">
 			<h1 id="sitetitle"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-			<?php if ( has_nav_menu( 'primary' ) ): ?>
-				<nav id="mainnav">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
-					<form action="<?php echo home_url(); ?>">
-						<input id="searchbox" name="s" type=type placeholder="Search..." value="<?php if ( isset( $_REQUEST['s'] ) ) echo esc_attr( $_REQUEST['s'] ); ?>">
-					</form>
-				</nav>
-			<?php endif; ?>
+			<nav id="mainnav">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'fb_callback' => 'wp_page_menu' ) ); ?>
+				<form action="<?php echo home_url(); ?>">
+					<input id="searchbox" name="s" type=type placeholder="Search..." value="<?php if ( isset( $_REQUEST['s'] ) ) echo esc_attr( $_REQUEST['s'] ); ?>">
+				</form>
+			</nav>
 		</header>
 		<div id="main">
