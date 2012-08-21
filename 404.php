@@ -8,9 +8,7 @@
 		</header>
 		<div class="article">
 			<p><?php _e( "It seems you've reached a page that doesn't exist. Try using the search form below.", 'v11' ); ?></p>
-			<form action="<?php echo home_url(); ?>">
-				<input type=text name=s> <input type=submit value="Search">
-			</form>
+			<?php get_search_form(); ?>
 		</div>
 	</article>
 

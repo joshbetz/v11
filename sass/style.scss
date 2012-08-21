@@ -734,7 +734,7 @@ aside {
 }
 
 /* Accessibility */
-.assistive-text { text-indent: -10000px; height: 0; }
+.assistive-text { text-indent: -10000px; height: 0; display: block; }
 
 /* Bio Widget */
 .widget_v11_bio_widget {
