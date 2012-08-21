@@ -43,7 +43,7 @@ class V11_Theme {
 		add_editor_style();
 
 		// This theme uses post formats
-		add_theme_support( 'post-formats', array( 'link', 'image', 'video', 'audio' ) );
+		add_theme_support( 'post-formats', array( 'link', 'image', 'video', 'audio', 'quote', 'status' ) );
 
 		// Post thumbnails are displayed above the article.
 		add_theme_support( 'post-thumbnails' );
