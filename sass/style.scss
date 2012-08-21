@@ -401,6 +401,9 @@ article {
 
 em { font-style: italic; }
 strong { font-weight: bold; }
+abbr { border-bottom: dotted 1px $grey; }
+q:before { content: "\201C"; }
+q:after { content: "\201D"; }
 
 #footer {
 	font-size: 12px;
@@ -491,7 +494,12 @@ table {
 		vertical-align: bottom;
 	}
 }
-.post-thumbnail { width: 100%; }
+.post-thumbnail {
+	width: 100%;
+	img {
+		margin: 0;
+	}
+}
 .wp-caption-text {
 	font-size: 13px;
 	font-style: italic;
