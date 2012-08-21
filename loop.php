@@ -34,7 +34,7 @@
 					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 				<?php endif; ?>
 				<div class="post-meta">
-					<span class="date"><?php the_time( get_option( 'date_format' ) ); ?></span>
+					<span class="date"><?php echo ( time() - get_the_time( 'U' ) < 86400 ? human_time_diff( get_the_time( 'U' ) ) . ' ago' : get_the_time( get_option( 'date_format' ) ) ); ?></span>
 					<span class="shortlink"><?php echo the_shortlink(); ?></span>
 				</div>
 			</header>
