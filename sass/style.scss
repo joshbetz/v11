@@ -354,6 +354,9 @@ article {
 	}
 	ol, ul {
 		padding-left: 20px;
+		ol, ul {
+			margin-bottom: 0;
+		}
 	}
 	ol.linenums { margin-left: 12px; }
 	ol { list-style: decimal; }
