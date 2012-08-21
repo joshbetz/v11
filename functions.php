@@ -80,37 +80,37 @@ class V11_Theme {
 	}
 
 	function customizer($theme) {
-		$theme->add_section( 'fonts', array(
+		$theme->add_section( 'v11_fonts', array(
 			'title' => 'Fonts',
 			'priority' => 35
 		) );
-		$theme->add_setting( 'cardo', array(
+		$theme->add_setting( 'v11_cardo', array(
 			'default' => false
 		) );
-		$theme->add_control( 'cardo', array(
+		$theme->add_control( 'v11_cardo', array(
 			'label' => 'Enable the Cardo typeface.',
-			'section' => 'fonts',
+			'section' => 'v11_fonts',
 			'type' => 'checkbox'
 		) );
-		$theme->add_setting( 'tinos', array(
+		$theme->add_setting( 'v11_tinos', array(
 			'default' => false
 		) );
-		$theme->add_control( 'tinos', array(
+		$theme->add_control( 'v11_tinos', array(
 			'label' => 'Enable the Tinos typeface.',
-			'section' => 'fonts',
+			'section' => 'v11_fonts',
 			'type' => 'checkbox'
 		) );
 
-		$theme->add_section( 'legal', array(
+		$theme->add_section( 'v11_legal', array(
 			'title' => 'Legal',
 			'priority' => 35
 		) );
-		$theme->add_setting( 'copyright', array(
+		$theme->add_setting( 'v11_copyright', array(
 			'default' => '&copy; {yyyy}'
 		) );
-		$theme->add_control( 'copyright', array(
+		$theme->add_control( 'v11_copyright', array(
 			'label' => 'Copyright Notice',
-			'section' => 'legal',
+			'section' => 'v11_legal',
 			'type' => 'text'
 		) );
 	}
