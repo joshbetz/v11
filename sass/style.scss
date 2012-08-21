@@ -479,6 +479,15 @@ pre {
 		@include box-shadow( 0 0 5px rgba(black, 0.15) );
 	}
 }
+.gallery-caption {
+	/*TODO*/
+}
+
+.aligncenter { text-align: center; }
+.alignleft { float: left; margin: 10px }
+.alignright { float: right; margin: 10px; }
+
+.sticky { /* nothing */ }
 
 /* Comments */
 .comments-title {
