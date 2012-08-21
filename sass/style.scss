@@ -431,6 +431,7 @@ blockquote {
 	margin: 30px 20px;
 	cite {
 		color: $grey;
+		a { color: $grey; }
 		&:before { content: "\2014"; margin-right: 10px; }
 	}
 	@media (max-width: 800px) {
