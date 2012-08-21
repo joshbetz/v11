@@ -463,6 +463,13 @@ pre {
   code { background: transparent; border: 0; padding: 0; }
 }
 
+table {
+	width: 100%;
+	.alternate { background: $lgrey; }
+	th { font-weight: bold; }
+	td { padding: 5px; }
+}
+
 .post-thumbnail, .wp-caption a {
 	display: inline-block;
 	margin-bottom: 20px;
