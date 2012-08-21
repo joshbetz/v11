@@ -63,8 +63,7 @@ class V11_Theme {
 
 	function enqueue_scripts() {
 		// Theme CSS and Javascript
-		wp_enqueue_style( 'v11', get_template_directory_uri() . '/css/style.css', false, self::VERSION );
-		wp_enqueue_style( 'child_theme', get_stylesheet_directory_uri() . '/style.css', false, self::VERSION );
+		wp_enqueue_style( 'v11', get_stylesheet_uri(), false, self::VERSION );
 		wp_enqueue_script( 'v11', get_template_directory_uri() . '/js/site.js', array( 'jquery', 'prettyprint', 'fitvids' ), self::VERSION, true );
 
 		// Load Google's prettyprint for code blocks
