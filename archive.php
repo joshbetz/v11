@@ -71,6 +71,10 @@
 		</nav><!-- #nav-above -->
 	<?php endif; ?>
 
+<?php else: ?>
+
+	<?php get_template_part( 'no-results' ); ?>
+
 <?php endif; ?>
 
 </section>
