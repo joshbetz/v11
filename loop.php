@@ -10,25 +10,31 @@
 				break;
 			case 'video':
 				$video = get_post_meta( $post->ID, '_format_video_embed', true );
-				$url = esc_url( $video );
-				if ( $embed = wp_oembed_get( $url ) )
-					echo $embed;
-				elseif ( !empty( $url ) ) {
-					printf( '<video controls src="%s"></video>', $url );
-				} else {
-					echo $video;
+				if ( !empty( $video ) ) {
+					$url = esc_url( $video );
+					if ( $embed = wp_oembed_get( $url ) )
+						echo $embed;
+					elseif ( !empty( $url ) ) {
+						printf( '<video controls src="%s"></video>', $url );
+					} else {
+						echo $video;
+					}
 				}
+				
 				break;
 			case 'audio':
 				$audio = get_post_meta( $post->ID, '_format_audio_embed', true );
-				$url = esc_url( $audio );
-				if ( $embed = wp_oembed_get( $url ) )
-					echo $embed;
-				elseif ( !empty( $url ) ) {
-					printf( '<audio controls src="%s"></audio>', $url );
-				} else {
-					echo $audio;
+				if ( !empty ( $audio ) ) {
+					$url = esc_url( $audio );
+					if ( $embed = wp_oembed_get( $url ) )
+						echo $embed;
+					elseif ( !empty( $url ) ) {
+						printf( '<audio controls src="%s"></audio>', $url );
+					} else {
+						echo $audio;
+					}
 				}
+				
 				break;
 			case 'quote':
 				$source = get_post_meta( $post->ID, '_format_quote_source_name', true );
