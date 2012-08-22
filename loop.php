@@ -41,6 +41,11 @@
 					echo "<cite>$source</cite>";
 				echo "</blockquote>";
 				break;
+			case 'status':
+				echo '<div class="article">';
+				the_content();
+				echo '</div>';
+				break;
 		}
 	?>
 
@@ -71,7 +76,7 @@
 		
 	<?php endif; ?>
 
-	<?php if ( 'quote' != $format ): ?>
+	<?php if ( 'quote' != $format && 'status' != $format ): ?>
 		<?php if ( ! is_search() ): ?>
 			<div class="article">
 				<?php the_content( __( '<p class="readmore">Continue reading <span class="meta-nav">&#10095;</span></p>', 'v11' ) ); ?>
