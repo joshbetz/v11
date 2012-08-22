@@ -299,6 +299,8 @@ body {
 	}
 }
 
+.page-header { margin-bottom: 50px; }
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	clear: both;
@@ -495,13 +497,11 @@ table {
 	img {
 		width: 100%; height: auto;
 		vertical-align: bottom;
+		margin-bottom: 0;
 	}
 }
 .post-thumbnail {
 	width: 100%;
-	img {
-		margin: 0;
-	}
 }
 .wp-caption-text {
 	font-size: 13px;
