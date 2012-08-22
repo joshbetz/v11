@@ -529,9 +529,11 @@ table {
 }
 .gallery-caption {}
 
-.aligncenter { margin: 0 auto; }
+.aligncenter { margin: 0 auto; display: block; }
 .alignleft { float: left; margin: 10px }
 .alignright { float: right; margin: 10px; }
+
+.page-links { clear: both; }
 
 .sticky {}
 

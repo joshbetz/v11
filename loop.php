@@ -94,7 +94,7 @@
 		<?php if ( ! is_search() ): ?>
 			<div class="article">
 				<?php the_content( __( '<p class="readmore">Continue reading <span class="meta-nav">&#10095;</span></p>', 'v11' ) ); ?>
-				<?php wp_link_pages(); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
 			</div>
 		<?php else: ?>
 			<div class="article">
