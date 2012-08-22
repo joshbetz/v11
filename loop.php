@@ -60,7 +60,8 @@
 			<header>
 				<?php if ( 'quote' != $format && 'status' != $format ): ?>
 					<?php if ( get_post_format() == "link" ):
-						$link = get_post_meta($post->ID, '_format_link_url', true); ?>
+						$link = get_post_meta($post->ID, '_format_link_url', true);
+						if ( empty( $link ) ) $link = v11_url_grabber( get_the_content() ); ?>
 						<h1><a href="<?php echo $link; ?>"><?php the_title(); ?></a></h1>
 					<?php elseif ( is_single() ): ?>
 						<h1><?php the_title(); ?></h1>

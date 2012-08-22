@@ -273,3 +273,15 @@ function v11_comment( $comment, $args, $depth ) {
 <?php
 }
 endif;
+
+if ( ! function_exists( 'v11_url_grabber' ) ) :
+/**
+ * 
+ */
+function v11_url_grabber( $content ) {
+	if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', $content, $matches ) )
+		return false;
+
+	return esc_url_raw( $matches[1] );
+}
+endif;
