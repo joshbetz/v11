@@ -13,7 +13,7 @@ class V11_Theme {
 	function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-		add_action( 'wp_title', array( $this, 'twentytwelve_wp_title' ), 10, 2 );
+		add_action( 'wp_title', array( $this, 'wp_title' ), 10, 2 );
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
 		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
 
@@ -115,7 +115,7 @@ class V11_Theme {
 		) );
 	}
 
-	function twentytwelve_wp_title( $title, $sep ) {
+	function wp_title( $title, $sep ) {
 		global $paged, $page;
 
 		if ( is_feed() )
