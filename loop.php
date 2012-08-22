@@ -9,10 +9,26 @@
 				echo "</div>";
 				break;
 			case 'video':
-				echo wp_oembed_get( get_post_meta( $post->ID, '_format_video_embed', true ) );
+				$video = get_post_meta( $post->ID, '_format_video_embed', true );
+				$url = esc_url( $video );
+				if ( $embed = wp_oembed_get( $url ) )
+					echo $embed;
+				elseif ( !empty( $url ) ) {
+					printf( '<video controls src="%s"></video>', $url );
+				} else {
+					echo $video;
+				}
 				break;
 			case 'audio':
-				echo wp_oembed_get( get_post_meta( $post->ID, '_format_audio_embed', true ) );
+				$audio = get_post_meta( $post->ID, '_format_audio_embed', true );
+				$url = esc_url( $audio );
+				if ( $embed = wp_oembed_get( $url ) )
+					echo $embed;
+				elseif ( !empty( $url ) ) {
+					printf( '<audio controls src="%s"></audio>', $url );
+				} else {
+					echo $audio;
+				}
 				break;
 			case 'quote':
 				$source = get_post_meta( $post->ID, '_format_quote_source_name', true );
