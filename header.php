@@ -25,7 +25,7 @@
 		<header id="header">
 			<h1 id="sitetitle"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 			<nav id="mainnav">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'fb_callback' => 'wp_page_menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'fallback_cb' => 'wp_page_menu' ) ); ?>
 				<?php get_search_form(); ?>
 			</nav>
 		</header>
