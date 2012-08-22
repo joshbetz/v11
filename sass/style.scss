@@ -15,13 +15,13 @@ $monospace: "inconsolata", Consolas, Monaco, monospace;
 
 @mixin breakpoint($point) {
 	@if $point == mobile {
-		@media (min-width: 650px) { @content; }
+		@media (max-width: 650px) { @content; }
 	}
 	@else if $point == mid {
-		@media (min-width: 800px) { @content; }
+		@media (max-width: 800px) { @content; }
 	}
 	@else if $point == large {
-		@media (min-width: 1170px) { @content; }
+		@media (max-width: 1170px) { @content; }
 	}
 }
 
@@ -48,7 +48,7 @@ body {
 	font-family: $body;
 	font-size: 14px;
 	color: #222;
-	@media (max-width: 800px) {
+	@include breakpoint(mid) {
 		padding: 10px 0;
 	}
 }
@@ -59,7 +59,7 @@ body {
 	border: solid 5px #ccc;
 	@include box-shadow( 0 0 20px rgba(0,0,0,.75) );
 	overflow: hidden;
-	@media (max-width: 800px) {
+	@include breakpoint(mid) {
 		padding: 25px 4%;
 		top: 40px;
 		margin-bottom: 40px;
@@ -70,7 +70,7 @@ body {
 	width: 70%;
 	float: left;
 	padding-right: 3%;
-	@media (max-width: 1170px) {
+	@include breakpoint(large) {
 		width: auto;
 		float: none;
 		padding: 0;
@@ -83,7 +83,7 @@ body {
 	float: right;
 	padding-left: 2%;
 	margin: 0 auto;
-	@media (max-width: 1170px) {
+	@include breakpoint(large) {
 		width: auto;
 		float: none;
 		padding: 0;
@@ -101,7 +101,7 @@ body {
 	top: 20px;
 	z-index: 100;
 	font-weight: bold;
-	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	@include retina() {
 		background-image: url(../images/nav-center@2x.png);
 		background-size: 1px 60px;
 	}
@@ -112,14 +112,14 @@ body {
 		width: 10px;
 		display: block;
 		top: 0;
-		@media (max-width: 800px) {
+		@include breakpoint(mid) {
 			display: none;
 		}
 	}
 	&:before {
 		left: -10px;
 		background-image: url(../images/nav-left.png);
-		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		@include retina() {
 			background-image: url(../images/nav-left@2x.png);
 			background-size: 10px 60px;
 		}
@@ -127,7 +127,7 @@ body {
 	&:after {
 		right: -10px;
 		background-image: url(../images/nav-right.png);
-		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		@include retina() {
 			background-image: url(../images/nav-right@2x.png);
 			background-size: 10px 60px;
 		}
@@ -144,7 +144,7 @@ body {
 		border-right: solid 1px $darkyellow;
 		a {
 			padding: 3px 20px;
-			@media (max-width: 800px) {
+			@include breakpoint(mid) {
 				padding: 3px 10px;
 			}
 		}
@@ -222,7 +222,7 @@ body {
 		&:focus {
 			max-width: 200px;
 		}
-		@media (max-width: 800px) {
+		@include breakpoint(mid) {
 			top: -40px;
 			left: 50%;
 			right: auto;
@@ -235,10 +235,10 @@ body {
 			&[value=""] { max-width: 200px; }
 		}
 	}
-	@media (max-width: 800px) {
+	@include breakpoint(mid) {
 		top: 50px;
 	}
-	@media (max-width:650px) {
+	@include breakpoint(mobile) {
 		font-size: 14px;
 		padding: 0 5px;
 	}
@@ -288,13 +288,13 @@ body {
 		}
 		&:active { top: 1px; }
 	}
-	@media (max-width: 800px) {
+	@include breakpoint(mid) {
 		margin-bottom: 0;
 		margin-top: 10px;
 		margin-left: 10px;
 		text-align: center;
 	}
-	@media (max-width: 650px) {
+	@include breakpoint(mobile) {
 		font-size: 32px;
 	}
 }
@@ -464,7 +464,7 @@ blockquote {
 		a { color: $grey; }
 		&:before { content: "\2014"; margin-right: 10px; }
 	}
-	@media (max-width: 800px) {
+	@include breakpoint(mid) {
 		font-size: 16px;
 		margin: 10px 5px;
 	}
@@ -577,7 +577,7 @@ table {
 		width: 70px; height: 70px;
 		@include box-shadow( 0 0 0 5px $lgrey );
 		@include border-radius( 35px );
-		@media (max-width:800px) {
+		@include breakpoint(mid) {
 			width: 50px; height: 50px;
 		}
 	}
@@ -589,7 +589,7 @@ table {
 		&:hover {
 			color: $darkyellow;
 		}
-		@media (max-width:800px) {
+		@include breakpoint(mid) {
 			left: 0; right: auto;
 			width: 60px;
 			top: 60px;
@@ -610,7 +610,7 @@ table {
 				border-color: $grey;
 			}
 		}
-		@media (max-width:800px) {
+		@include breakpoint(mid) {
 			left: 80px;
 			font-size: 16px;
 		}
@@ -619,7 +619,7 @@ table {
 		margin-left: 100px;
 		margin-top: -40px;
 		line-height: 1.3;
-		@media (max-width:800px) {
+		@include breakpoint(mid) {
 			margin-left: 80px;
 			margin-top: -30px;
 		}
@@ -627,7 +627,7 @@ table {
 }
 .children {
 	margin-left: 100px;
-	@media (max-width: 800px) {
+	@include breakpoint(mid) {
 		margin-left: 50px;
 	}
 	li.comment {
@@ -636,28 +636,28 @@ table {
 			content: url(../images/arrow-grey-big.png);
 			left: -52px;
 			top: 20px;
-			@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+			@include retina() {
 				content: url(../images/arrow-grey-big@2x.png);
 			}
-			@media (max-width:800px) {
+			@include breakpoint(mid) {
 				content: url(../images/arrow-grey-small.png);
 				left: -40px;
 				top: 24px;
-				@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+				@include retina() {
 					content: url(../images/arrow-grey-small@2x.png)
 				}
 			}
 		}
 		&.bypostauthor:before {
 			content: url(../images/arrow-yellow-big.png);
-			@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+			@include retina() {
 				content: url(../images/arrow-yellow-big@2x.png);
 			}
-			@media (max-width:800px) {
+			@include breakpoint(mid) {
 				content: url(../images/arrow-yellow-small.png);
 				left: -40px;
 				top: 24px;
-				@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+				@include retina() {
 					content: url(../images/arrow-yellow-small@2x.png)
 				}
 			}
@@ -678,7 +678,7 @@ table {
 	}
 	.children {
 		margin-left: 80px;
-		@media (max-width: 800px) {
+		@include breakpoint(mid) {
 			margin-left: 45px;
 		}
 		li.comment {
@@ -686,13 +686,13 @@ table {
 				content: url(../images/arrow-grey-small.png);
 				left: -46px;
 				top: 24px;
-				@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+				@include retina() {
 					content: url(../images/arrow-grey-small@2x.png);
 				}
 			}
 			&.bypostauthor:before {
 				content: url(../images/arrow-yellow-small.png);
-				@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+				@include retina() {
 					content: url(../images/arrow-yellow-small@2x.png);
 				}
 			}
@@ -814,7 +814,7 @@ aside {
 		background-image: url(../images/icons.png);
 		display: inline-block;
 		text-indent: -10000px;
-		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		@include retina() {
 			background-image: url(../images/icons@2x.png);
 			background-size: 413px 33px;
 		}
