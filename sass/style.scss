@@ -322,7 +322,7 @@ a {
 }
 
 /* dates */
-.date {
+.meta-date {
 	font-size: 12px;
 	text-decoration: none;
 	letter-spacing: 1px;
@@ -373,7 +373,7 @@ article {
 		vertical-align: sub;
 		font-size: 12px;
 	}
-	.date {
+	.meta-date {
 		padding: 3px 6px;
 		margin: 5px 0;
 		background: $lgrey;
@@ -568,7 +568,7 @@ table {
 			width: 50px; height: 50px;
 		}
 	}
-	.date {
+	.meta-date {
 		background: transparent;
 		text-transform: uppercase;
 		position: absolute;
