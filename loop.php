@@ -39,12 +39,19 @@
 			case 'quote':
 				$source = get_post_meta( $post->ID, '_format_quote_source_name', true );
 				$url = get_post_meta( $post->ID, '_format_quote_source_url', true );
-				echo "<blockquote>";
+				
+				if ( $url )
+					echo "<blockquote cite='$url'>";
+				else
+					echo "<blockquote>";
+				
 				the_content();
+				
 				if ( $url && $source )
 					printf( '<cite><a href="%s">%s</a></cite>', esc_url( $url ), $source );
 				elseif ( $source )
 					echo "<cite>$source</cite>";
+				
 				echo "</blockquote>";
 				break;
 			case 'status':
