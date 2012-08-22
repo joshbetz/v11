@@ -349,8 +349,11 @@ article {
 		}
 	}
 	img { max-width: 100%; }
-	p, pre, ul, ol, dl, dd, img, video, embed, audio, address {
+	p, pre, ul, ol, dl, dd, img, video, embed, audio, address, iframe {
 		margin-bottom: 20px;
+	}
+	embed, iframe, audio, video, object {
+		width: 100%;
 	}
 	ol, ul {
 		padding-left: 20px;
