@@ -698,8 +698,8 @@ table {
 .pingback, .trackback {
 	margin: 20px 0;
 	p {
-		border: solid 1px $grey;
-		background: $lgrey;
+		border-top: solid 1px $lgrey;
+		border-bottom: solid 1px $lgrey;
 		padding: 14px;
 		font-size: 16px;
 	}
