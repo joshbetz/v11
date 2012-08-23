@@ -438,6 +438,7 @@ q:after { content: "\201D"; }
 	font-size: 12px;
 	padding: 10px;
 	color: $dgrey;
+	line-height: 18px;
 	a {
 		color: $dgrey;
 		font-weight: bold;
@@ -447,6 +448,10 @@ q:after { content: "\201D"; }
 		}
 	}
 	span { max-width: 50%; }
+	.wisconsin {
+		font-size: 18px;
+		vertical-align: middle;
+	}
 }
 .footer-left {
 	text-align: left;
