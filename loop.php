@@ -73,7 +73,7 @@
 	<?php else: ?>
 		
 			<header>
-				<?php if ( 'quote' != $format && 'status' != $format ): ?>
+				<?php if ( 'quote' != $format && 'status' != $format && get_the_title() ): ?>
 					<?php if ( get_post_format() == "link" ):
 						$link = get_post_meta($post->ID, '_format_link_url', true);
 						if ( empty( $link ) ) $link = v11_url_grabber( get_the_content() ); ?>
