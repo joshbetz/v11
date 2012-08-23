@@ -372,7 +372,7 @@ article {
 			}
 		}
 	}
-	img { max-width: 100%; }
+	img { max-width: 100%; height: auto; }
 	p, pre, ul, ol, dl, dd, video, embed, audio, address, iframe {
 		margin-bottom: 30px;
 	}
@@ -513,7 +513,6 @@ table {
 .post-thumbnail, .wp-caption a {
 	display: inline-block;
 	margin-bottom: 20px;
-	@include border-radius( 3px );
 	&:before {
 		content: "";
 		display: block;
