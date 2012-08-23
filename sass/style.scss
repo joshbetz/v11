@@ -95,7 +95,6 @@ body {
 #mainnav {
 	font-size: 18px;
 	font-family: $sans;
-	height: 60px;
 	background-image: url(../images/nav-center.png);
 	position: relative;
 	top: 20px;
@@ -108,7 +107,7 @@ body {
 	&:before, &:after {
 		content: "";
 		position: absolute;
-		height: 60px;
+		height: 100%;
 		width: 10px;
 		display: block;
 		top: 0;
@@ -138,13 +137,20 @@ body {
 		@include text-shadow( rgba(white, 0.5) 0 1px 0 );
 		&:hover { color: #111; }
 	}
-	ul { line-height: 56px; }
+	ul {
+		margin-right: 200px;
+		@include breakpoint(mid) {
+			margin-right: 0;
+		}
+	}
 	li {
-		display: inline;
-		border-right: solid 1px $darkyellow;
+		display: inline-block;
 		position: relative;
+		line-height: 56px;
+		height: 60px;
 		a {
 			padding: 3px 20px;
+			border-right: solid 1px $darkyellow;
 			@include breakpoint(mid) {
 				padding: 3px 10px;
 			}
@@ -172,7 +178,7 @@ body {
 			margin: 0;
 			display: none;
 			position: absolute;
-			top: 24px;
+			top: 52px;
 			background: $yellow;
 			font-size: 14px;
 			@include border-radius( 4px );
@@ -186,6 +192,7 @@ body {
 		&:hover > .sub-menu,
 		&:hover > .children {
 			display: block;
+			z-index: 10000;
 		}
 	}
 	.sub-menu li,
