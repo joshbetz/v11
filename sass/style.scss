@@ -771,7 +771,24 @@ aside {
 }
 
 /* Accessibility */
-.assistive-text { text-indent: -10000px; height: 0; display: block; }
+.assistive-text { position: absolute; top: -9999px; left: -9999px; }
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: 'icomoon'; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
 
 /* Bio Widget */
 .widget_v11_bio_widget {

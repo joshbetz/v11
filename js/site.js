@@ -15,7 +15,7 @@
 
 		if (a) { prettyPrint(); }
 	}
-
+	
 	styleCode();
 	$("article").fitVids({customSelector: "iframe[src^='//speakerdeck.com']"});
 })(jQuery);
