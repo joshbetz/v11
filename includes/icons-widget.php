@@ -14,7 +14,8 @@ class V11_Icons_Widget extends WP_Widget {
 		'lastfm' => 'Last.fm',
 		'skype' => 'Skype',
 		'flickr' => 'Flickr',
-		'vimeo' => 'Vimeo'
+		'vimeo' => 'Vimeo',
+		'wordpress' => 'WordPress'
 	);
 
 	public function __construct() {
@@ -42,7 +43,7 @@ class V11_Icons_Widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['title'] = sanitize_email( $new_instance['title'] );
-		$instance['icons'] = array_map( 'esc_attr', $new_instance['icons'] );
+		$instance['icons'] = array_map( 'esc_url', $new_instance['icons'] );
 		return $instance;
 	}
 
