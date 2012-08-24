@@ -14,14 +14,14 @@ $body: "ff-meta-serif-web-pro", "Cardo", "Baskerville", serif;
 $monospace: "inconsolata", Consolas, Monaco, monospace;
 
 @mixin breakpoint($point) {
-	@if $point == mobile {
-		@media (max-width: 650px) { @content; }
-	}
-	@else if $point == mid {
-		@media (max-width: 800px) { @content; }
+	@if $point == mid {
+		@media (min-width: 650px) { @content; }
 	}
 	@else if $point == large {
-		@media (max-width: 1170px) { @content; }
+		@media (min-width: 800px) { @content; }
+	}
+	@else if $point == huge {
+		@media (min-width: 1170px) { @content; }
 	}
 }
 
@@ -44,75 +44,73 @@ $monospace: "inconsolata", Consolas, Monaco, monospace;
 html { max-width: 1460px; margin: 0 auto; }
 
 body {
-	padding: 40px 5%;
+	padding: 10px 0;
 	font-family: $body;
 	font-size: 14px;
 	color: #222;
-	@include breakpoint(mid) {
-		padding: 10px 0;
+	@include breakpoint(large) {
+		padding: 40px 5%;
 	}
 }
 
 #main {
 	background: white;
-	padding: 4%;
+	padding: 25px 4%;
 	border: solid 5px #ccc;
+	top: 40px;
+	margin-bottom: 40px;
 	@include box-shadow( 0 0 20px rgba(0,0,0,.75) );
 	overflow: hidden;
-	@include breakpoint(mid) {
-		padding: 25px 4%;
-		top: 40px;
-		margin-bottom: 40px;
+	@include breakpoint(large) {
+		padding: 4%;
+		top: 0;
+		margin-bottom: 0;
 	}
 }
 
 #content {
-	width: 70%;
-	float: left;
-	padding-right: 3%;
-	@include breakpoint(large) {
-		width: auto;
-		float: none;
-		padding: 0;
+	@include breakpoint(huge) {
+		width: 70%;
+		float: left;
+		padding-right: 3%;
 	}
 }
 
 #sidebar {
-	max-width: 340px;
-	width: 30%;
-	float: right;
+	width: 340px;
 	padding-left: 2%;
+	margin-top: 60px;
 	margin: 0 auto;
-	@include breakpoint(large) {
-		width: auto;
-		float: none;
-		padding: 0;
-		margin-top: 60px;
+	@include breakpoint(huge) {
+		width: 30%;
+		max-width: 340px;
+		float: right;
+		padding-left: 2%;
+		margin-top: 0 auto;
 	}
 }
 
 /* Nav */
 #mainnav {
-	font-size: 18px;
 	font-family: $sans;
 	background-image: url(../images/nav-center.png);
 	position: relative;
-	top: 20px;
+	top: 50px;
 	z-index: 100;
 	font-weight: bold;
+	padding: 0 5px;
 	@include retina() {
 		background-image: url(../images/nav-center@2x.png);
 		background-size: 1px 60px;
 	}
 	&:before, &:after {
-		content: "";
-		position: absolute;
-		height: 100%;
-		width: 10px;
-		display: block;
-		top: 0;
-		@include breakpoint(mid) {
-			display: none;
+		@include breakpoint(large) {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 10px;
+			display: block;
+			top: 0;
 		}
 	}
 	&:before {
@@ -138,9 +136,8 @@ body {
 		&:hover { color: #111; }
 	}
 	ul {
-		margin-right: 200px;
-		@include breakpoint(mid) {
-			margin-right: 0;
+		@include breakpoint(large) {
+			margin-right: 200px;
 		}
 	}
 	li {
@@ -149,10 +146,10 @@ body {
 		line-height: 56px;
 		height: 60px;
 		a {
-			padding: 3px 20px;
+			padding: 3px 10px;
 			border-right: solid 1px $darkyellow;
-			@include breakpoint(mid) {
-				padding: 3px 10px;
+			@include breakpoint(large) {
+				padding: 3px 20px;
 			}
 		}
 		&:last-child {
@@ -217,43 +214,44 @@ body {
 	}
 	#searchbox {
 		position: absolute;
-		top: 9px;
-		right: 0;
-		font-size: 18px;
+		top: -40px;
+		left: 50%;
+		margin-left: -100px;
 		border: 0;
-		@include background( linear-gradient( rgba(black, 0.15), rgba(black, 0.1) ) );
 		padding: 5px 10px;
+		width: 200px;
 		max-width: 200px;
+		color: white;
+		@include background( linear-gradient( rgba(black, 0.15), rgba(black, 0.1) ) );
 		@include box-shadow( inset 0 1px 1px rgba(black, 0.2), inset 0 -1px 1px rgba(white, 0.1) );
 		@include border-radius( 4px );
 		@include transition( max-width 0.5s ease );
 		&::-webkit-input-placeholder,
-		&::-moz-placeholder { color: $grey; }
+		&::-moz-placeholder { color: rgba(white, 0.2); }
 		&[value=""] {
-			max-width: 100px;
-		}
-		&:focus {
 			max-width: 200px;
 		}
-		@include breakpoint(mid) {
-			top: -40px;
-			left: 50%;
-			right: auto;
-			margin-left: -100px;
-			width: 200px;
-			font-size: 14px;
-			color: white;
+		@include breakpoint(large) {
+			top: 9px;
+			left: auto;
+			right: 0;
+			margin-left: 0;
+			font-size: 18px;
+			color: inherit;
 			&::-webkit-input-placeholder,
-			&::-moz-placeholder { color: rgba(white, 0.2); }
-			&[value=""] { max-width: 200px; }
+			&::-moz-placeholder { color: $grey; }
+			&[value=""] { max-width: 100px; }
+			&:focus {
+				max-width: 200px;
+			}
 		}
 	}
-	@include breakpoint(mid) {
-		top: 50px;
+	@include breakpoint(large) {
+		top: 20px;
 	}
-	@include breakpoint(mobile) {
-		font-size: 14px;
-		padding: 0 5px;
+	@include breakpoint(mid) {
+		font-size: 18px;
+		padding: 0;
 	}
 }
 
@@ -289,8 +287,10 @@ body {
 
 /* Typography */
 #sitetitle {
-	margin-bottom: 20px;
-	font-size: 52px;
+	font-size: 32px;
+	margin-top: 10px;
+	margin-left: 10px;
+	text-align: center;
 	font-family: $serif;
 	@include text-shadow( rgba(white, 0.5) 0 -1px 0 );
 	a {
@@ -301,14 +301,14 @@ body {
 		}
 		&:active { top: 1px; }
 	}
-	@include breakpoint(mid) {
-		margin-bottom: 0;
-		margin-top: 10px;
-		margin-left: 10px;
-		text-align: center;
+	@include breakpoint(large) {
+		margin-bottom: 20px;
+		margin-top: 0;
+		margin-left: 0;
+		text-align: left;
 	}
-	@include breakpoint(mobile) {
-		font-size: 32px;
+	@include breakpoint(mid) {
+		font-size: 52px;
 	}
 }
 
@@ -472,11 +472,11 @@ q:after { content: "\201D"; }
 }
 
 blockquote {
-	font-size: 18px;
+	font-size: 16px;
 	font-style: italic;
 	padding: 0 20px;
 	border-left: solid 3px $lgrey;
-	margin: 30px 20px;
+	margin: 20px 5px;
 	cite {
 		color: $grey;
 		font-style: normal;
@@ -484,9 +484,9 @@ blockquote {
 		a { color: $grey; }
 		&:before { content: "\2014"; margin-right: 10px; }
 	}
-	@include breakpoint(mid) {
-		font-size: 16px;
-		margin: 10px 5px;
+	@include breakpoint(large) {
+		font-size: 18px;
+		margin: 30px 20px;
 	}
 }
 
@@ -593,34 +593,40 @@ table {
 	header { margin-bottom: 0; }
 	.avatar {
 		margin: 5px;
-		width: 70px; height: 70px;
+		width: 50px; height: 50px;
 		@include box-shadow( 0 0 0 5px $lgrey );
 		@include border-radius( 35px );
-		@include breakpoint(mid) {
-			width: 50px; height: 50px;
+		@include breakpoint(large) {
+			width: 70px; height: 70px;
 		}
 	}
 	.meta-date {
 		background: transparent;
 		text-transform: uppercase;
 		position: absolute;
-		top: 0; right: 0;
+		top: 60px;
+		width: 60px;
+		text-align: center;
+		font-size: 10px;
+		left: 0;
 		&:hover {
 			color: $darkyellow;
 		}
-		@include breakpoint(mid) {
-			left: 0; right: auto;
-			width: 60px;
-			top: 60px;
-			text-align: center;
-			font-size: 10px;
+		@include breakpoint(large) {
+			right: 0;
+			top: 0;
+			width: auto;
+			left: auto;
+			text-align: left;
+			font-size: 12px;
 		}
 	}
 	cite {
 		position: absolute;
-		top: 5px; left: 100px;
+		top: 5px; left: 80px;
 		font-size: 20px;
 		font-weight: bold;
+		font-size: 16px;
 		a {
 			color: #222;
 			text-decoration: none;
@@ -629,55 +635,53 @@ table {
 				border-color: $grey;
 			}
 		}
-		@include breakpoint(mid) {
-			left: 80px;
-			font-size: 16px;
+		@include breakpoint(large) {
+			left: 100px;
+			font-size: 20px;
 		}
 	}
 	.comment-content {
-		margin-left: 100px;
-		margin-top: -40px;
+		margin-left: 80px;
+		margin-top: -30px;
 		line-height: 1.3;
-		@include breakpoint(mid) {
-			margin-left: 80px;
-			margin-top: -30px;
+		@include breakpoint(large) {
+			margin-left: 100px;
+			margin-top: -40px;
 		}
 	}
 }
 .children {
-	margin-left: 100px;
-	@include breakpoint(mid) {
-		margin-left: 50px;
+	margin-left: 50px;
+	@include breakpoint(large) {
+		margin-left: 100px;
 	}
 	li.comment {
 		&:before {
 			position: absolute;
-			content: url(../images/arrow-grey-big.png);
-			left: -52px;
-			top: 20px;
+			content: url(../images/arrow-grey-small.png);
+			left: -40px;
+			top: 24px;
 			@include retina() {
-				content: url(../images/arrow-grey-big@2x.png);
+				content: url(../images/arrow-grey-small@2x.png);
 			}
-			@include breakpoint(mid) {
-				content: url(../images/arrow-grey-small.png);
-				left: -40px;
-				top: 24px;
+			@include breakpoint(large) {
+				content: url(../images/arrow-grey-big.png);
+				left: -52px;
+				top: 20px;
 				@include retina() {
-					content: url(../images/arrow-grey-small@2x.png)
+					content: url(../images/arrow-grey-big@2x.png);
 				}
 			}
 		}
 		&.bypostauthor:before {
-			content: url(../images/arrow-yellow-big.png);
+			content: url(../images/arrow-yellow-small.png);
 			@include retina() {
-				content: url(../images/arrow-yellow-big@2x.png);
+				content: url(../images/arrow-yellow-small@2x.png);
 			}
-			@include breakpoint(mid) {
-				content: url(../images/arrow-yellow-small.png);
-				left: -40px;
-				top: 24px;
+			@include breakpoint(large) {
+				content: url(../images/arrow-yellow-big.png);
 				@include retina() {
-					content: url(../images/arrow-yellow-small@2x.png)
+					content: url(../images/arrow-yellow-big@2x.png);
 				}
 			}
 		}
@@ -696,9 +700,9 @@ table {
 		}
 	}
 	.children {
-		margin-left: 80px;
-		@include breakpoint(mid) {
-			margin-left: 45px;
+		margin-left: 45px;
+		@include breakpoint(large) {
+			margin-left: 80px;
 		}
 		li.comment {
 			&:before {
