@@ -3,13 +3,6 @@
 	<?php
 		$format = get_post_format();
 		switch( $format ) {
-			case 'image':
-				if ( has_post_thumbnail() ) {
-					echo "<div class='post-thumbnail'>";
-					the_post_thumbnail();
-					echo "</div>";
-				}
-				break;
 			case 'video':
 				$video = get_post_meta( $post->ID, '_format_video_embed', true );
 				if ( !empty( $video ) ) {
@@ -61,6 +54,12 @@
 				the_content();
 				echo '</div>';
 				break;
+		}
+
+		if ( has_post_thumbnail() ) {
+			echo "<div class='post-thumbnail'>";
+			the_post_thumbnail();
+			echo "</div>";
 		}
 	?>
 
