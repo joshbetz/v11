@@ -84,7 +84,7 @@
 					<?php endif; ?>
 				<?php endif; ?>
 				<div class="post-meta">
-					<span class="meta-date"><?php echo ( time() - get_the_time( 'U' ) < 86400 ? human_time_diff( get_the_time( 'U' ) ) . ' ago' : get_the_time( get_option( 'date_format' ) ) ); ?></span>
+					<span class="meta-date"><?php echo ( time() - get_the_time( 'U' ) < 86400 ? human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) . ' ago' : get_the_time( get_option( 'date_format' ) ) ); ?></span>
 					<span class="meta-shortlink"><?php echo the_shortlink(); ?></span>
 				</div>
 			</header>
