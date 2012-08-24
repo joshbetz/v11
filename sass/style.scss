@@ -414,8 +414,8 @@ article {
 		margin-top: 25px;
 	}
 	.single &:after,
-	&:last-child:after {
-		content: "";
+	&:last-of-type:after {
+		display: none;
 	}
 }
 .article {
