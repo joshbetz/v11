@@ -52,7 +52,7 @@ class V11_Icons_Widget extends WP_Widget {
 		$icons = !empty( $instance['icons'] ) ? $instance['icons'] : array();
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'v11' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="title" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
