@@ -798,6 +798,13 @@ aside {
   speak: none; /* Not to be trusted, but hey. */
 }
 
+.post-meta .icon {
+	font-size: 12px; margin-right: 5px;
+}
+.meta-tags {
+	margin: 10px 0;
+}
+
 /* Bio Widget */
 .widget_v11_bio_widget {
 	text-align: center;
