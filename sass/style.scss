@@ -372,6 +372,9 @@ article {
 			}
 		}
 	}
+	.meta-tags {
+		margin: 16px 0;
+	}
 	img { max-width: 100%; height: auto; }
 	p, pre, ul, ol, dl, dd, video, embed, audio, address, iframe {
 		margin-bottom: 30px;
@@ -800,9 +803,6 @@ aside {
 
 .post-meta .icon {
 	font-size: 12px; margin-right: 5px;
-}
-.meta-tags {
-	margin: 10px 0;
 }
 
 /* Bio Widget */
