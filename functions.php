@@ -3,6 +3,9 @@
 include 'includes/bio-widget.php';
 include 'includes/icons-widget.php';
 
+if ( ! isset( $content_width ) )
+	$content_width = 840; /* pixels */
+
 /**
  * V11 Theme
  */
