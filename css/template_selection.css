@@ -1,0 +1,35 @@
+#page_template_visual {
+	margin: 0 -10px;
+}
+
+#page_template_visual a {
+	display: inline-block;
+	width: 129px;
+	height: 100px;
+	margin: 0 5px 5px;
+	text-align: center;
+	color: #333333;
+	font-weight: bold;
+	text-decoration: none;
+	background: url(../images/layouts.png) no-repeat left top;
+}
+
+#page_template_visual a small {
+	height: 64px;
+	width: 119px;
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+}
+
+/* You can define images for the options here based on the classnames */
+#page_template_visual a.template-left-sidebar {background-position: right top;}
+#page_template_visual a.template-right-sidebar {background-position: left -100px;}
+
+#page_template_visual a.selected {
+	color: #559a08;
+	text-shadow: 1px 1px 0px #fff;  
+}
+
+#page_template_visual a.selected small {
+	background: rgba(106,189,15,0.1) url(../images/checkmark.png) no-repeat center;
+}       
