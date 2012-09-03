@@ -175,6 +175,14 @@ body {
 	.wordpress  { background-position: $btnwidth * 11 0; }
 }
 
+.jetpack_subscription_widget {
+	p {
+		font-style: italic;
+		color: grey;
+		font-size: 12px;
+	}
+}
+
 /* Nav */
 #mainnav {
 	font-family: $sans;
