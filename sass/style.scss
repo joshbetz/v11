@@ -98,6 +98,19 @@ body {
 	}
 }
 
+/* Sidebar Widgets */
+aside {
+	margin: 40px 0;
+	h1 {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	li, p {
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+}
+
 /* Bio Widget */
 .widget_v11_bio_widget {
 	text-align: center;
@@ -863,19 +876,6 @@ input {
 	.comment-notes { font-size: 12px; font-style: italic; color: $grey; }
 	.form-allowed-tags { display: none; }
 	.form-submit input { padding: 8px; background: $grey; @include border-radius( 4px ); cursor: pointer; }
-}
-
-/* Sidebar Widgets */
-aside {
-	margin: 40px 0;
-	h1 {
-		font-size: 24px;
-		margin-bottom: 10px;
-	}
-	li, p {
-		line-height: 1.2;
-		margin-bottom: 10px;
-	}
 }
 
 /* Accessibility */
