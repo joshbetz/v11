@@ -1,4 +1,3 @@
-			<?php get_sidebar(); ?>
 			</div>
 		<footer id="footer">
 			<span class="footer-left"><?php echo str_replace( "{yyyy}", date('Y'), get_theme_mod( 'v11_copyright' ) ); ?></span>
