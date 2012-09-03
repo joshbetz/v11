@@ -74,6 +74,11 @@ body {
 		float: left;
 		padding-right: 3%;
 	}
+	.page-template-default & {
+		width: 100%;
+		padding: 0;
+		float: none;
+	}
 }
 
 #sidebar {
@@ -87,6 +92,9 @@ body {
 		float: right;
 		padding-left: 2%;
 		margin-top: 0 auto;
+	}
+	.page-template-default & {
+		display: none;
 	}
 }
 
