@@ -81,8 +81,8 @@ class V11_Theme {
 
 	function admin_scripts() {
 		// Template selection
-		wp_enqueue_script( 'customtheme_admin_js', get_bloginfo('template_directory') . '/js/template_selection.js' );
-    	wp_enqueue_style( 'customtheme_admin_css', get_bloginfo('template_directory') . '/css/template_selection.css' );
+		wp_enqueue_script( 'customtheme_admin_js', get_template_directory_uri() . '/js/template_selection.js' );
+    	wp_enqueue_style( 'customtheme_admin_css', get_template_directory_uri() . '/css/template_selection.css' );
 	}
 
 	function customizer_menu() {
