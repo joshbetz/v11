@@ -1,4 +1,8 @@
 (function($) {
+	// Add speakerdeck to fitvids
+	$("article").fitVids({customSelector: "iframe[src^='//speakerdeck.com']"});
+
+	// Style <pre><code> blocks with Google's prettyPrint (syntax highlighting)
 	function styleCode() {
 		if (typeof disableStyleCode !== "undefined") {
 			return;
@@ -15,7 +19,5 @@
 
 		if (a) { prettyPrint(); }
 	}
-	
 	styleCode();
-	$("article").fitVids({customSelector: "iframe[src^='//speakerdeck.com']"});
 })(jQuery);
