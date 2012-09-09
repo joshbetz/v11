@@ -1,4 +1,12 @@
 (function($) {
+	// This is a work-around until #21534 is fixed
+	$('#mainnav li').not('.menu-item-has-children').each(function() {
+		var $el = $(this);
+		if ( $el.find('ul').length > 0 ) {
+			$el.addClass('menu-item-has-children');
+		}
+	});
+
 	// Add speakerdeck to fitvids
 	$("article").fitVids({customSelector: "iframe[src^='//speakerdeck.com']"});
 
