@@ -46,7 +46,7 @@ html { max-width: 1460px; margin: 0 auto; }
 body {
 	padding: 10px 0;
 	font-family: $body;
-	font-size: 14px;
+	font-size: 16px;
 	color: #222;
 	@include breakpoint(large) {
 		padding: 40px 5%;
@@ -475,6 +475,7 @@ article {
 	}
 	header { margin-bottom: 40px; }
 	.post-meta {
+		font-size: 13px;
 		span {
 			margin-right: 10px;
 			&:last-child {
