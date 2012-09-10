@@ -1,17 +1,21 @@
-<?php
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'video' ); ?>>
 
-$video = get_post_meta( $post->ID, '_format_video_embed', true );
-if ( !empty( $video ) ) {
-	$url = esc_url( $video );
-	echo "<div class='post-video'>";
-	if ( $embed = wp_oembed_get( $url ) )
-		echo $embed;
-	elseif ( !empty( $url ) ) {
-		printf( '<video controls src="%s"></video>', $url );
-	} else {
-		echo $video;
-	}
-	echo "</div>";
-}
+	<?php
 
-get_template_part( 'loop' );
+		$video = get_post_meta( $post->ID, '_format_video_embed', true );
+		if ( !empty( $video ) ) {
+			$url = esc_url( $video );
+			if ( $embed = wp_oembed_get( $url ) )
+				echo $embed;
+			elseif ( !empty( $url ) ) {
+				printf( '<video controls src="%s"></video>', $url );
+			} else {
+				echo $video;
+			}
+		}
+
+		get_template_part( 'loop-base' );
+
+	?>
+
+</article>
