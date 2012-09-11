@@ -397,7 +397,7 @@ aside {
 
 /* Typography */
 #sitetitle {
-	font-size: 32px;
+	font-size: 42px;
 	margin-top: 10px;
 	margin-left: 10px;
 	text-align: center;
@@ -411,14 +411,12 @@ aside {
 		}
 		&:active { top: 1px; }
 	}
-	@include breakpoint(large) {
-		margin-bottom: 20px;
-		margin-top: 0;
-		margin-left: 0;
-		text-align: left;
-	}
 	@include breakpoint(mid) {
-		font-size: 52px;
+		font-size: 60px;
+	}
+	@include breakpoint(large) {
+		font-size: 100px;
+		margin-bottom: 20px;
 	}
 }
 
