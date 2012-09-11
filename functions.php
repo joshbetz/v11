@@ -173,7 +173,7 @@ class V11_Theme {
 		return sprintf( '<a rel="shortlink" href="%s" title=%s>%s</a>', esc_url( $shortlink ), $title, str_replace( array( 'https://', 'http://' ), '', $shortlink ) );
 	}
 
-	function remove_widows($title){
+	function remove_widows( $title ) {
 		$title_length = strlen( $title );
 		$anchor_array = explode(' ', $title);
 
