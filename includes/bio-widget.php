@@ -7,6 +7,8 @@ class V11_Bio_Widget extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
+		global $v11_theme;
+		
 		extract( $args );
 		$email = isset( $instance['email'] ) ? esc_attr( $instance['email'] ) : get_option( 'admin_email' );
 
@@ -22,7 +24,7 @@ class V11_Bio_Widget extends WP_Widget {
 		echo get_avatar( $email, 102 );
 		echo "<span class='last-name'>" . $last_name . "</span>";
 		echo "</div>";
-		echo "<div class='bio'>" . $author->description . "</span>";
+		echo "<div class='bio'>" . $v11_theme->remove_widows( $author->description ) . "</span>";
 		echo $after_widget;
 	}
 

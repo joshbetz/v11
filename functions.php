@@ -238,7 +238,7 @@ class V11_Theme {
 	}
 }
 
-new V11_Theme();
+$v11_theme = new V11_Theme();
 
 if ( ! function_exists( 'v11_comment' ) ) :
 /**
