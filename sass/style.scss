@@ -471,12 +471,14 @@ article {
 	h1 {
 		font-size: 28px;
 		margin-bottom: 10px;
+		margin-right: 75px;
 	}
 	header { margin-bottom: 40px; }
 	.post-meta {
 		font-size: 13px;
 		margin-top: 15px;
 		line-height: 15px;
+		margin-right: 75px;
 		span {
 			margin-right: 10px;
 			&:last-child {
@@ -485,6 +487,20 @@ article {
 		}
 		.icon {
 			font-size: 12px; margin-right: 5px;
+		}
+	}
+	.comment-count {
+		position: absolute;
+		right: 0; top: 0;
+		height: 50px; width: 50px;
+		font-size: 25px;
+		background: $lgrey;
+		text-align: center;
+		line-height: 50px;
+		@include border-radius( 25px );
+		a {
+			color: $grey;
+			text-decoration: none;
 		}
 	}
 	.meta-tags {
