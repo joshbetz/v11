@@ -9,7 +9,7 @@ $grey: rgba(black, 0.2);
 $lgrey: rgba(black, 0.1);
 
 $sans: "adelle-sans", "Helvetica", sans-serif;
-$serif: "adelle", "Tinos", "Georgia", serif;
+$serif: "modesto-text", "Tinos", "Georgia", serif;
 $body: "ff-meta-serif-web-pro", "Cardo", "Baskerville", serif;
 $monospace: "inconsolata", Consolas, Monaco, monospace;
 
@@ -434,6 +434,7 @@ aside {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	clear: both;
+	font-family: $serif;
 	a {
 		color: #222;
 		text-decoration: none;
