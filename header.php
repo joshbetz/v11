@@ -18,6 +18,9 @@
 
 	wp_head();
 	?>
+
+	<?php if ( get_theme_mod( 'title_color', false ) ): ?><style>#sitetitle a { color: <?php echo get_theme_mod( 'title_color' ); ?> }</style><?php endif; ?>
+	<?php if ( get_theme_mod( 'link_color', false ) ): ?><style>a { color: <?php echo get_theme_mod( 'link_color' ); ?> }</style><?php endif; ?>
 </head>
 <body <?php body_class(); ?>>
 

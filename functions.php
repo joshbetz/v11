@@ -89,7 +89,9 @@ class V11_Theme {
 		add_theme_page( __( 'Customize', 'v11' ), __( 'Customize', 'v11' ), 'edit_theme_options', 'customize.php' );
 	}
 
-	function customizer($theme) {
+	function customizer( $theme ) {
+
+		// Google Fonts
 		$theme->add_section( 'v11_fonts', array(
 			'title' => 'Fonts',
 			'priority' => 35
@@ -111,6 +113,7 @@ class V11_Theme {
 			'type' => 'checkbox'
 		) );
 
+		// Copyright notice
 		$theme->add_section( 'v11_legal', array(
 			'title' => 'Legal',
 			'priority' => 35
@@ -123,6 +126,22 @@ class V11_Theme {
 			'section' => 'v11_legal',
 			'type' => 'text'
 		) );
+
+		// Title Color
+		$theme->add_setting( 'title_color' );
+		$theme->add_control( new WP_Customize_Color_Control( $theme, 'title_color', array(
+			'label' => 'Title Color',
+			'section' => 'colors',
+			'settings' => 'title_color'
+		) ) );
+
+		// Link Color
+		$theme->add_setting( 'link_color' );
+		$theme->add_control( new WP_Customize_Color_Control( $theme, 'link_color', array(
+			'label' => 'Link Color',
+			'section' => 'colors',
+			'settings' => 'link_color'
+		) ) );
 	}
 
 	function wp_title( $title, $sep ) {
