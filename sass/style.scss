@@ -668,8 +668,8 @@ table {
 .gallery-caption {}
 
 .aligncenter { margin: 0 auto; display: block; }
-.alignleft { float: left; margin: 10px }
-.alignright { float: right; margin: 10px; }
+.alignleft { float: left; margin: 10px; margin-left: 0; }
+.alignright { float: right; margin: 10px; margin-right: 0; }
 
 .page-links { clear: both; }
 
