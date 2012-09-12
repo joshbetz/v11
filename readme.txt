@@ -7,6 +7,8 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
+v11 is a responsive theme that utilizes the customizer to give you added control over the appearance of your blog. It is available [on github](https://github.com/joshbetz/v11), and I welcome any pull requests.
+
 == Installation ==
 
 1. Install the theme folder in `/wp-content/themes/`
