@@ -307,6 +307,7 @@ aside {
 		a {
 			padding: 0 20px;
 			display: block;
+			white-space: pre;
 		}
 		&:hover { background: $darkyellow; }
 		&:first-child { @include border-top-radius( 4px ); }
