@@ -188,7 +188,7 @@ class V11_Theme {
 	}
 
 	function shortlink_remove_protocol( $link, $shortlink, $text, $title ) {
-		return sprintf( '<a rel="shortlink" href="%s" title=%s>%s</a>', esc_url( $shortlink ), $title, str_replace( array( 'https://', 'http://' ), '', $shortlink ) );
+		return sprintf( '<a rel="shortlink" href="%s" title="%s">%s</a>', esc_url( $shortlink ), $title, str_replace( array( 'https://', 'http://' ), '', $shortlink ) );
 	}
 
 	function remove_widows( $title ) {
