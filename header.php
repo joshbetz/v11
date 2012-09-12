@@ -12,12 +12,7 @@
 	<?php if ( get_theme_mod( 'v11_cardo', false ) ): ?><link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'><?php endif; ?>
 	<?php if ( get_theme_mod( 'v11_tinos', false ) ): ?><link href='http://fonts.googleapis.com/css?family=Tinos:400,700,400italic' rel='stylesheet' type='text/css'><?php endif; ?>
 	
-	<?php
-	if ( is_singular() && get_option( 'thread_comments' ) )
-		wp_enqueue_script( 'comment-reply' );
-
-	wp_head();
-	?>
+	<?php wp_head(); ?>
 
 	<?php if ( get_theme_mod( 'title_color', false ) ): ?><style>#sitetitle a { color: <?php echo get_theme_mod( 'title_color' ); ?> }</style><?php endif; ?>
 	<?php if ( get_theme_mod( 'link_color', false ) ): ?><style>a { color: <?php echo get_theme_mod( 'link_color' ); ?> }</style><?php endif; ?>

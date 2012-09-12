@@ -20,6 +20,7 @@ class V11_Theme {
 		add_action( 'wp_title', array( $this, 'wp_title' ), 10, 2 );
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
 		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
+		add_action( 'comment_form_before', array( $this, 'comments_reply_script' ) );
 
 		// Set up the customizer
 		add_action( 'admin_menu', array( $this, 'customizer_menu' ) );
@@ -76,6 +77,11 @@ class V11_Theme {
 		// Template selection
 		wp_enqueue_script( 'customtheme_admin_js', get_template_directory_uri() . '/js/template_selection.js' );
     	wp_enqueue_style( 'customtheme_admin_css', get_template_directory_uri() . '/css/template_selection.css' );
+	}
+
+	function comments_reply_script() {
+		if ( get_option( 'thread_comments' ) )
+			wp_enqueue_script( 'comment-reply' );
 	}
 
 	function customizer_menu() {
