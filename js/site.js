@@ -11,7 +11,7 @@
 	$("article").fitVids({customSelector: "iframe[src^='//speakerdeck.com']"});
 
 	// Prevent widows
-	$("header h1").each(function() {
+	$("header h1 a").each(function() {
 		var wordArray = $(this).text().split(" ");
 		wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
 		wordArray.pop();
