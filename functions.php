@@ -27,7 +27,6 @@ class V11_Theme {
 	}
 
 	function init() {
-		add_filter( 'the_title', array( $this, 'remove_widows' ) );
 		add_filter( 'post_link', array( $this, 'link_post_links' ) );
 		add_filter( 'the_permalink', array( $this, 'link_permalinks' ) );
 		add_filter( 'the_title', array( $this, 'link_titles' ), 10, 2 );

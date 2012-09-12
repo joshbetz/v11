@@ -10,6 +10,14 @@
 	// Add speakerdeck to fitvids
 	$("article").fitVids({customSelector: "iframe[src^='//speakerdeck.com']"});
 
+	// Prevent widows
+	$("header h1").each(function() {
+		var wordArray = $(this).text().split(" ");
+		wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+		wordArray.pop();
+		$(this).html(wordArray.join(" "));
+	});
+
 	// Style <pre><code> blocks with Google's prettyPrint (syntax highlighting)
 	function styleCode() {
 		if (typeof disableStyleCode !== "undefined") {
