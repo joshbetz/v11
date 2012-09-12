@@ -24,7 +24,7 @@ class V11_Bio_Widget extends WP_Widget {
 		echo get_avatar( $email, 102 );
 		echo "<span class='last-name'>" . $last_name . "</span>";
 		echo "</div>";
-		echo "<div class='bio'>" . $v11_theme->remove_widows( $author->description ) . "</span>";
+		echo "<div class='bio'>" . $v11_theme->remove_widows( $author->description ) . "</div>";
 		echo $after_widget;
 	}
 
