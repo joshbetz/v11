@@ -1,3 +1,0 @@
-[submodule "includes/cf_post_formats"]
-	path = includes/cf_post_formats
-	url = https://github.com/crowdfavorite/wp-post-formats.git
