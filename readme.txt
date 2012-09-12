@@ -1,9 +1,9 @@
 === v11 ===
 Contributors: betzster
-Tags: custom-background, custom-menu, flexible-width, black, threaded-comments, two-columns, theme-options, translation-ready
-Stable tag: 1.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         yellow, white, two-columns, right-sidebar, flexible-width, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready
+Stable tag:   1.0
+License:      GPLv2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
