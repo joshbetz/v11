@@ -24,8 +24,8 @@
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation" role="navigation">
 			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'v11' ); ?></h1>
-			<div class="nav-previous">&#10094; <?php previous_comments_link( __( 'Older Comments', 'v11' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'v11' ) ); ?> &#10095;</div>
+			<div class="nav-previous"><?php previous_comments_link( sprintf( __( '%s Older Comments', 'v11' ), '&#10094;' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( sprintf( __( 'Newer Comments %s', 'v11' ), '&#10095;' ) ); ?> </div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
 

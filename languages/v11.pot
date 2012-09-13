@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v11 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v11\n"
-"POT-Creation-Date: 2012-09-13 04:00:42+00:00\n"
+"POT-Creation-Date: 2012-09-13 04:08:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -59,11 +59,11 @@ msgid "Comment navigation"
 msgstr ""
 
 #: comments.php:27
-msgid "Older Comments"
+msgid "%s Older Comments"
 msgstr ""
 
 #: comments.php:28
-msgid "Newer Comments"
+msgid "Newer Comments %s"
 msgstr ""
 
 #: comments.php:36
