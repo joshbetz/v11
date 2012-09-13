@@ -297,6 +297,45 @@ function v11_comment( $comment, $args, $depth ) {
 }
 endif;
 
+if ( ! function_exists( 'v11_content_nav' ) ):
+/**
+ * Display navigation to next/previous pages when applicable
+ *
+ * @since _s 1.0
+ */
+function v11_content_nav( $nav_id = 'navigation' ) {
+	global $wp_query;
+
+	$nav_class = 'site-navigation paging-navigation';
+	if ( is_single() )
+		$nav_class = 'site-navigation post-navigation';
+
+	?>
+	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
+		<h1 class="assistive-text"><?php _e( 'Post navigation', 'v11' ); ?></h1>
+
+	<?php if ( is_single() ) : // navigation links for single posts ?>
+
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&#10094;', 'Previous post link', 'v11' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&#10095;', 'Next post link', 'v11' ) . '</span>' ); ?>
+
+	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+
+		<?php if ( get_next_posts_link() ) : ?>
+		<div class="nav-previous"><?php next_posts_link( sprintf( __( '%s Older posts', 'v11' ), '<span class="meta-nav">&#10094;</span>' ) ); ?></div>
+		<?php endif; ?>
+
+		<?php if ( get_previous_posts_link() ) : ?>
+		<div class="nav-next"><?php previous_posts_link( sprintf( __( 'Newer posts %s', 'v11' ), '<span class="meta-nav">&#10095;</span>' ) ); ?></div>
+		<?php endif; ?>
+
+	<?php endif; ?>
+
+	</nav><!-- #<?php echo $nav_id; ?> -->
+	<?php
+}
+endif; // _s_content_nav
+
 if ( ! function_exists( 'v11_url_grabber' ) ) :
 /**
  * 

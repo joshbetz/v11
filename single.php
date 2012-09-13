@@ -6,11 +6,7 @@
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php get_template_part( 'loop', get_post_format() ); ?>
 
-		<nav class="nav-single">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'v11' ); ?></h3>
-			<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&#10094;</span> %title' ); ?></span>
-			<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&#10095;</span>' ); ?></span>
-		</nav><!-- .nav-single -->
+		<?php v11_content_nav(); ?>
 
 		<?php
 			// If comments are open or we have at least one comment, load up the comment template
