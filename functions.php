@@ -103,11 +103,11 @@ class V11_Theme {
 			'section' => 'v11_fonts',
 			'type' => 'checkbox'
 		) );
-		$theme->add_setting( 'v11_tinos', array(
+		$theme->add_setting( 'v11_bree', array(
 			'default' => false
 		) );
-		$theme->add_control( 'v11_tinos', array(
-			'label' => 'Enable the Tinos typeface.',
+		$theme->add_control( 'v11_bree', array(
+			'label' => 'Enable the Bree Serif typeface.',
 			'section' => 'v11_fonts',
 			'type' => 'checkbox'
 		) );
