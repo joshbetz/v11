@@ -22,8 +22,8 @@
 }
 
 /* You can define images for the options here based on the classnames */
-#page_template_visual a[class*="templates/left-sidebar"] {background-position: right top;}
-#page_template_visual a[class*="templates/right-sidebar"] {background-position: left -100px;}
+#page_template_visual a.page-left-sidebar {background-position: right top;}
+#page_template_visual a.page-right-sidebar {background-position: left -100px;}
 
 #page_template_visual a.selected {
 	color: #559a08;
