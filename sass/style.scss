@@ -366,11 +366,10 @@ aside {
 	}
 }
 
-.nav-single {
+.post-navigation {
 	margin: 10px 0;
 	overflow: hidden;
 	font-size: 12px;
-	margin-bottom: 100px;
 }
 @mixin smallnavlinks() {
 	text-transform: uppercase;
@@ -691,6 +690,9 @@ table {
 .sticky {}
 
 /* Comments */
+#comments {
+	margin-top: 100px;
+}
 .comments-title {
 	font-size: 26px;
 }
