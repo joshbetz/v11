@@ -50,7 +50,7 @@
 	</header>
 	
 	<?php while ( have_posts() ) : the_post(); ?>
-		<?php get_template_part( 'loop' ); ?>
+		<?php get_template_part( 'loop', get_post_format() ); ?>
 	<?php endwhile; ?>
 
 	<?php v11_content_nav(); ?>
