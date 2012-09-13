@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v11 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v11\n"
-"POT-Creation-Date: 2012-09-13 04:08:45+00:00\n"
+"POT-Creation-Date: 2012-09-13 04:38:58+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,6 +68,10 @@ msgstr ""
 
 #: comments.php:36
 msgid "Comments are closed."
+msgstr ""
+
+#: content-meta.php:13
+msgid "Tags:"
 msgstr ""
 
 #: footer.php:4
@@ -164,11 +168,11 @@ msgstr ""
 msgid "Title:"
 msgstr ""
 
-#: loop-base.php:36
+#: loop-base.php:46
 msgid "Continue reading"
 msgstr ""
 
-#: loop-base.php:37
+#: loop-base.php:47
 msgid "Pages:"
 msgstr ""
 
