@@ -57,6 +57,9 @@ class V11_Theme {
 		add_theme_support( 'custom-background', array(
 			'default-image' => get_template_directory_uri() . '/images/bg.png',
 		) );
+
+		// Add translation support
+		load_theme_textdomain( 'v11', get_template_directory() . '/languages' );
 	}
 
 	function enqueue_scripts() {

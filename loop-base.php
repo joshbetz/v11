@@ -33,7 +33,7 @@
 
 <?php if ( ! is_search() ): ?>
 	<div class="article">
-		<?php the_content( __( '<p class="readmore">Continue reading <span class="meta-nav">&#10095;</span></p>', 'v11' ) ); ?>
+		<?php the_content( '<p class="readmore">' . __( 'Continue reading', 'v11' ) . ' <span class="meta-nav">&#10095;</span></p>' ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
 	</div>
 <?php else: ?>

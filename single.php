@@ -8,8 +8,8 @@
 
 		<nav class="nav-single">
 			<h3 class="assistive-text"><?php _e( 'Post navigation', 'v11' ); ?></h3>
-			<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&#10094;</span>', 'v11' ) . ' %title' ); ?></span>
-			<span class="nav-next"><?php next_post_link( '%link', '%title ' . __( '<span class="meta-nav">&#10095;</span>', 'v11' ) ); ?></span>
+			<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&#10094;</span> %title' ); ?></span>
+			<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&#10095;</span>' ); ?></span>
 		</nav><!-- .nav-single -->
 
 		<?php

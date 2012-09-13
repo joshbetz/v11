@@ -1,0 +1,202 @@
+# Copyright (C) 2012 Josh Betz
+# This file is distributed under the GNU General Public License v2.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: v11 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/v11\n"
+"POT-Creation-Date: 2012-09-13 02:04:58+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:7
+msgid "404: Four oh Four."
+msgstr ""
+
+#: 404.php:10
+msgid "It seems you've reached a page that doesn't exist. Try using the search form below."
+msgstr ""
+
+#: archive.php:11
+msgid "Category Archives: %s"
+msgstr ""
+
+#: archive.php:14
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: archive.php:18
+msgid "Author Archives: %s"
+msgstr ""
+
+#: archive.php:21
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:24
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:27
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:30
+msgid "Archives"
+msgstr ""
+
+#: archive.php:58 index.php:13 single.php:10
+msgid "Post navigation"
+msgstr ""
+
+#: archive.php:59 index.php:14
+msgid "Older posts"
+msgstr ""
+
+#: archive.php:60 index.php:15
+msgid "Newer posts"
+msgstr ""
+
+#: comments.php:15
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:26
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:27
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:28
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:36
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:4
+msgid "v11 Theme made by %s in %s."
+msgstr ""
+
+#: footer.php:4
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: functions.php:54
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:91
+msgid "Customize"
+msgstr ""
+
+#: functions.php:165
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:172
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:174
+msgid "Appears on posts and pages except the optional Homepage template, which uses its own set of widgets"
+msgstr ""
+
+#: functions.php:266
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:266
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:289
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:294
+msgid "Edit"
+msgstr ""
+
+#: functions.php:295
+msgid "Reply"
+msgstr ""
+
+#: includes/bio-widget.php:6
+msgid "v11 Bio Widget"
+msgstr ""
+
+#: includes/bio-widget.php:6
+msgid "A bio widget specific to the v11 theme."
+msgstr ""
+
+#: includes/bio-widget.php:41
+msgid "Email:"
+msgstr ""
+
+#: includes/icons-widget.php:22
+msgid "v11 Icons Widget"
+msgstr ""
+
+#: includes/icons-widget.php:22
+msgid "A social icon widget specific to the v11 theme."
+msgstr ""
+
+#: includes/icons-widget.php:55
+msgid "Title:"
+msgstr ""
+
+#: loop-base.php:36
+msgid "Continue reading"
+msgstr ""
+
+#: loop-base.php:37
+msgid "Pages:"
+msgstr ""
+
+#: no-results.php:3
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:9
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:13
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: no-results.php:18
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "v11"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://joshbetz.com/2012/08/v11/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "v11 is a responsive theme with a customizable background. There are built-in widgets to display your biography and links to your social networking profiles."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Josh Betz"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://joshbetz.com/"
+msgstr ""
+
+#. Tags of the plugin/theme
+msgid "yellow, white, two-columns, right-sidebar, flexible-width, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready"
+msgstr ""
