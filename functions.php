@@ -268,7 +268,7 @@ function v11_comment( $comment, $args, $depth ) {
 					echo get_avatar( $comment, 70 );
 					printf( '<cite class="fn">%1$s</cite>', get_comment_author_link() );
 
-					$datetime = time() - get_comment_time( 'U' ) < 86400 ? human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) . ' ago' : get_comment_date();
+					$datetime = current_time( 'timestamp' ) - get_comment_time( 'U' ) < 86400 ? human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) . ' ago' : get_comment_date();
 					printf( '<a class="meta-date" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 						esc_url( get_comment_link( $comment->comment_ID ) ),
 						get_comment_time( 'c' ),
