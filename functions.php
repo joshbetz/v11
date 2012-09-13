@@ -98,19 +98,11 @@ class V11_Theme {
 			'title' => 'Fonts',
 			'priority' => 35
 		) );
-		$theme->add_setting( 'v11_cardo', array(
+		$theme->add_setting( 'v11_google_fonts', array(
 			'default' => false
 		) );
-		$theme->add_control( 'v11_cardo', array(
-			'label' => 'Enable the Cardo typeface.',
-			'section' => 'v11_fonts',
-			'type' => 'checkbox'
-		) );
-		$theme->add_setting( 'v11_bree', array(
-			'default' => false
-		) );
-		$theme->add_control( 'v11_bree', array(
-			'label' => 'Enable the Bree Serif typeface.',
+		$theme->add_control( 'v11_google_fonts', array(
+			'label' => 'Enable Google Fonts.',
 			'section' => 'v11_fonts',
 			'type' => 'checkbox'
 		) );
