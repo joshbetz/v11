@@ -82,12 +82,11 @@ body {
 }
 
 #sidebar {
-	width: 340px;
-	margin-top: 60px;
+	max-width: 340px;
 	margin: 0 auto;
+	margin-top: 60px;
 	@include breakpoint(huge) {
 		width: 30%;
-		max-width: 340px;
 		float: right;
 		padding-left: 2%;
 		margin-top: 0;
