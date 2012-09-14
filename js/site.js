@@ -13,9 +13,11 @@
 	// Prevent widows
 	$("header h1 a").each(function() {
 		var wordArray = $(this).text().split(" ");
-		wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
-		wordArray.pop();
-		$(this).html(wordArray.join(" "));
+		if ( wordArray.length > 1 ) {
+			wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+			wordArray.pop();
+			$(this).html(wordArray.join(" "));
+		}
 	});
 
 	// Style <pre><code> blocks with Google's prettyPrint (syntax highlighting)
