@@ -338,7 +338,7 @@ endif; // _s_content_nav
 
 if ( ! function_exists( 'v11_url_grabber' ) ) :
 /**
- * 
+ * Grab the first URL in a link post so we can use it as the href
  */
 function v11_url_grabber( $content ) {
 	if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', $content, $matches ) )
