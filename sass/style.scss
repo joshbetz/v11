@@ -366,7 +366,7 @@ aside {
 	}
 }
 
-.post-navigation {
+.navigation {
 	margin: 10px 0;
 	overflow: hidden;
 	font-size: 12px;
@@ -691,6 +691,9 @@ table {
 
 /* Comments */
 #comments {
+	margin-top: 100px;
+}
+#respond {
 	margin-top: 100px;
 }
 .comments-title {

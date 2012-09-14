@@ -306,9 +306,9 @@ if ( ! function_exists( 'v11_content_nav' ) ):
 function v11_content_nav( $nav_id = 'navigation' ) {
 	global $wp_query;
 
-	$nav_class = 'site-navigation paging-navigation';
+	$nav_class = 'navigation paging-navigation';
 	if ( is_single() )
-		$nav_class = 'site-navigation post-navigation';
+		$nav_class = 'navigation post-navigation';
 
 	?>
 	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
