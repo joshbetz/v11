@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v11 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v11\n"
-"POT-Creation-Date: 2012-09-13 04:38:58+00:00\n"
+"POT-Creation-Date: 2012-09-14 23:30:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,20 +54,20 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:26
+#: comments.php:26 functions.php:128
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:32
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:27
+#: comments.php:33
 msgid "%s Older Comments"
 msgstr ""
 
-#: comments.php:28
+#: comments.php:34
 msgid "Newer Comments %s"
-msgstr ""
-
-#: comments.php:36
-msgid "Comments are closed."
 msgstr ""
 
 #: content-meta.php:13
@@ -90,57 +90,85 @@ msgstr ""
 msgid "Customize"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:98
+msgid "Fonts"
+msgstr ""
+
+#: functions.php:105
+msgid "Enable Google Fonts."
+msgstr ""
+
+#: functions.php:112
+msgid "Messages"
+msgstr ""
+
+#: functions.php:121
+msgid "Copyright Notice"
+msgstr ""
+
+#: functions.php:131
+msgid "Closed Comments Message"
+msgstr ""
+
+#: functions.php:139
+msgid "Title Color"
+msgstr ""
+
+#: functions.php:147
+msgid "Link Color"
+msgstr ""
+
+#: functions.php:169
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:176
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:166
+#: functions.php:178
 msgid "Appears on posts and pages except the optional Homepage template, which uses its own set of widgets"
 msgstr ""
 
-#: functions.php:258
+#: functions.php:270
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:258
+#: functions.php:270
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:281
+#: functions.php:293
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:286
+#: functions.php:298
 msgid "Edit"
 msgstr ""
 
-#: functions.php:287
+#: functions.php:299
 msgid "Reply"
 msgstr ""
 
-#: functions.php:315
+#: functions.php:327
 msgid "Post navigation"
 msgstr ""
 
-#: functions.php:319
+#: functions.php:331
 msgctxt "Previous post link"
 msgid "&#10094;"
 msgstr ""
 
-#: functions.php:320
+#: functions.php:332
 msgctxt "Next post link"
 msgid "&#10095;"
 msgstr ""
 
-#: functions.php:325
+#: functions.php:337
 msgid "%s Older posts"
 msgstr ""
 
-#: functions.php:329
+#: functions.php:341
 msgid "Newer posts %s"
 msgstr ""
 

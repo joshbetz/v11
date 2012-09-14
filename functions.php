@@ -95,21 +95,21 @@ class V11_Theme {
 
 		// Google Fonts
 		$theme->add_section( 'v11_fonts', array(
-			'title' => 'Fonts',
+			'title' => __( 'Fonts', 'v11' ),
 			'priority' => 35
 		) );
 		$theme->add_setting( 'v11_google_fonts', array(
 			'default' => false
 		) );
 		$theme->add_control( 'v11_google_fonts', array(
-			'label' => 'Enable Google Fonts.',
+			'label' => __( 'Enable Google Fonts.', 'v11' ),
 			'section' => 'v11_fonts',
 			'type' => 'checkbox'
 		) );
 
 		// Messages
 		$theme->add_section( 'v11_messages', array(
-			'title' => 'Messages',
+			'title' => __( 'Messages', 'v11' ),
 			'priority' => 35
 		) );
 
@@ -118,17 +118,17 @@ class V11_Theme {
 			'default' => '&copy; {yyyy}'
 		) );
 		$theme->add_control( 'v11_copyright', array(
-			'label' => 'Copyright Notice',
+			'label' => __( 'Copyright Notice', 'v11' ),
 			'section' => 'v11_messages',
 			'type' => 'text'
 		) );
 
 		// No comments
 		$theme->add_setting( 'v11_comments_closed', array(
-			'default' => 'Comments are closed.'
+			'default' => __( 'Comments are closed.', 'v11' )
 		) );
 		$theme->add_control( 'v11_comments_closed', array(
-			'label' => 'Closed Comments Message',
+			'label' => __( 'Closed Comments Message', 'v11' ),
 			'section' => 'v11_messages',
 			'type' => 'text'
 		) );
@@ -136,7 +136,7 @@ class V11_Theme {
 		// Title Color
 		$theme->add_setting( 'title_color' );
 		$theme->add_control( new WP_Customize_Color_Control( $theme, 'title_color', array(
-			'label' => 'Title Color',
+			'label' => __( 'Title Color', 'v11' ),
 			'section' => 'colors',
 			'settings' => 'title_color'
 		) ) );
@@ -144,7 +144,7 @@ class V11_Theme {
 		// Link Color
 		$theme->add_setting( 'link_color' );
 		$theme->add_control( new WP_Customize_Color_Control( $theme, 'link_color', array(
-			'label' => 'Link Color',
+			'label' => __( 'Link Color', 'v11' ),
 			'section' => 'colors',
 			'settings' => 'link_color'
 		) ) );
