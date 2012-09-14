@@ -700,11 +700,15 @@ table {
 .commentlist {
 	#respond {
 		margin-top: 0;
-		margin-left: 110px;
+		@include breakpoint(large) {
+			margin-left: 110px;
+		}
 	}
 	.children {
 		#respond {
-			margin-left: 95px;
+			@include breakpoint(large) {
+				margin-left: 95px;
+			}
 		}
 	}
 }
