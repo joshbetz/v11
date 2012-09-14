@@ -19,6 +19,12 @@
 
 		<ol class="commentlist">
 			<?php wp_list_comments( array( 'callback' => 'v11_comment', 'style' => 'ol' ) ); ?>
+			<?php
+				// If comments are closed and there are comments, let's leave a little note.
+				if ( ! comments_open() && post_type_supports( get_post_type(), 'comments' ) ) :
+			?>
+				<li class="nocomments"><p><?php echo get_theme_mod( 'v11_closed_comments', __( 'Comments are closed.', 'v11' ) ); ?></p></li>
+			<?php endif; ?>
 		</ol><!-- .commentlist -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
@@ -28,13 +34,7 @@
 			<div class="nav-next"><?php next_comments_link( sprintf( __( 'Newer Comments %s', 'v11' ), '&#10095;' ) ); ?> </div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
-
-	<?php
-		// If comments are closed and there are comments, let's leave a little note.
-		elseif ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'v11' ); ?></p>
-	<?php endif; ?>
+	<?php endif; // have_comments() ?>
 
 	<?php comment_form(); ?>
 

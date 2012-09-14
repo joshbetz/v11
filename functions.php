@@ -107,17 +107,29 @@ class V11_Theme {
 			'type' => 'checkbox'
 		) );
 
-		// Copyright notice
-		$theme->add_section( 'v11_legal', array(
-			'title' => 'Legal',
+		// Messages
+		$theme->add_section( 'v11_messages', array(
+			'title' => 'Messages',
 			'priority' => 35
 		) );
+
+		// Copyright notice
 		$theme->add_setting( 'v11_copyright', array(
 			'default' => '&copy; {yyyy}'
 		) );
 		$theme->add_control( 'v11_copyright', array(
 			'label' => 'Copyright Notice',
-			'section' => 'v11_legal',
+			'section' => 'v11_messages',
+			'type' => 'text'
+		) );
+
+		// No comments
+		$theme->add_setting( 'v11_comments_closed', array(
+			'default' => 'Comments are closed.'
+		) );
+		$theme->add_control( 'v11_comments_closed', array(
+			'label' => 'Closed Comments Message',
+			'section' => 'v11_messages',
 			'type' => 'text'
 		) );
 

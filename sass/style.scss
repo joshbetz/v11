@@ -870,7 +870,7 @@ table {
 		}
 	}
 }
-.pingback, .trackback {
+.pingback, .trackback, .nocomments {
 	margin: 20px 0;
 	p {
 		border-top: solid 1px $lgrey;
@@ -878,6 +878,11 @@ table {
 		padding: 14px;
 		font-size: 16px;
 	}
+}
+.nocomments {
+	font-style: italic;
+	color: $grey;
+	text-align: center;
 }
 
 input {
