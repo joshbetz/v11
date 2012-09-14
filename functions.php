@@ -347,3 +347,35 @@ function v11_url_grabber( $content ) {
 	return esc_url_raw( $matches[1] );
 }
 endif;
+
+if ( ! function_exists( 'v11_possibly_related_posts' ) ) :
+/**
+ * On 404 pages, run a search based on the URI.
+ * Maybe we'll come up with what they were looking for
+ * and avoid forcing them to do a search
+ */
+function v11_possibly_related_posts() {
+	if ( ! is_404() )
+		return;
+
+	$uri = esc_url( $_SERVER['REQUEST_URI'] );
+	$uri = array_pop( explode( '/', $uri ) );
+
+	$search = trim( preg_replace( '@[_-]@', ' ', $uri ) );
+	$posts = get_posts( array( 's' => $search ) );
+
+	if ( count( $posts ) == 0 )
+		return;
+
+	$related = "<h2>Maybe these will help?</h2>";
+	$related .= "<ul>";
+	foreach ( $posts as $post ) {
+		$title = $post->post_title;
+		$permalink = get_permalink( $post->ID );
+		$related .= "<li><a href='$permalink'>$title</a></li>";
+	}
+	$related .= "</ul>";
+
+	echo $related;
+}
+endif;

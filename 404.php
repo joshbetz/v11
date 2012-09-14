@@ -9,6 +9,7 @@
 		<div class="article">
 			<p><?php _e( "It seems you've reached a page that doesn't exist. Try using the search form below.", 'v11' ); ?></p>
 			<?php get_search_form(); ?>
+			<?php v11_possibly_related_posts(); ?>
 		</div>
 	</article>
 
