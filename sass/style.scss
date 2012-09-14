@@ -83,7 +83,6 @@ body {
 
 #sidebar {
 	width: 340px;
-	padding-left: 2%;
 	margin-top: 60px;
 	margin: 0 auto;
 	@include breakpoint(huge) {
@@ -91,7 +90,7 @@ body {
 		max-width: 340px;
 		float: right;
 		padding-left: 2%;
-		margin-top: 0 auto;
+		margin-top: 0;
 	}
 	.page-template-default & {
 		display: none;
