@@ -793,31 +793,36 @@ table {
 	}
 	li.comment {
 		&:before {
+			content: "";
 			position: absolute;
-			content: url(../images/arrow-grey-small.png);
+			background: url(../images/arrow-grey-small.png) no-repeat;
 			left: -40px;
 			top: 24px;
+			width: 32px;
+			height: 24px;
 			@include retina() {
-				content: url(../images/arrow-grey-small@2x.png);
+				background: url(../images/arrow-grey-small@2x.png);
 			}
 			@include breakpoint(large) {
-				content: url(../images/arrow-grey-big.png);
+				background: url(../images/arrow-grey-big.png);
 				left: -52px;
 				top: 20px;
+				width: 39px;
+				height: 29px;
 				@include retina() {
-					content: url(../images/arrow-grey-big@2x.png);
+					background: url(../images/arrow-grey-big@2x.png);
 				}
 			}
 		}
 		&.bypostauthor:before {
-			content: url(../images/arrow-yellow-small.png);
+			background: url(../images/arrow-yellow-small.png);
 			@include retina() {
-				content: url(../images/arrow-yellow-small@2x.png);
+				background: url(../images/arrow-yellow-small@2x.png);
 			}
 			@include breakpoint(large) {
-				content: url(../images/arrow-yellow-big.png);
+				background: url(../images/arrow-yellow-big.png);
 				@include retina() {
-					content: url(../images/arrow-yellow-big@2x.png);
+					background: url(../images/arrow-yellow-big@2x.png);
 				}
 			}
 		}
@@ -842,17 +847,20 @@ table {
 		}
 		li.comment {
 			&:before {
-				content: url(../images/arrow-grey-small.png);
+				background: url(../images/arrow-grey-small.png);
 				left: -46px;
+				background-size: 32px 24px;
 				top: 24px;
+				width: 32px;
+				height: 24px;
 				@include retina() {
-					content: url(../images/arrow-grey-small@2x.png);
+					background: url(../images/arrow-grey-small@2x.png);
 				}
 			}
 			&.bypostauthor:before {
-				content: url(../images/arrow-yellow-small.png);
+				background: url(../images/arrow-yellow-small.png);
 				@include retina() {
-					content: url(../images/arrow-yellow-small@2x.png);
+					background: url(../images/arrow-yellow-small@2x.png);
 				}
 			}
 		}
