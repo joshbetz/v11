@@ -796,6 +796,7 @@ table {
 			content: "";
 			position: absolute;
 			background: url(../images/arrow-grey-small.png) no-repeat;
+			background-size: 32px 24px;
 			left: -40px;
 			top: 24px;
 			width: 32px;
@@ -805,6 +806,7 @@ table {
 			}
 			@include breakpoint(large) {
 				background: url(../images/arrow-grey-big.png);
+				background-size: 39px 29px;
 				left: -52px;
 				top: 20px;
 				width: 39px;
@@ -848,8 +850,8 @@ table {
 		li.comment {
 			&:before {
 				background: url(../images/arrow-grey-small.png);
-				left: -46px;
 				background-size: 32px 24px;
+				left: -46px;
 				top: 24px;
 				width: 32px;
 				height: 24px;
