@@ -1,0 +1,65 @@
+/* Typography */
+#sitetitle {
+	font-size: 42px;
+	margin-top: 10px;
+	margin-left: 10px;
+	text-align: center;
+	font-family: $serif;
+	@include text-shadow( 1px 1px 5px rgba(black, 0.5) );
+	a {
+		color: #333;
+		font-weight: bold;
+		&:hover {
+			color: #121212;
+		}
+		&:active { top: 1px; }
+	}
+	@include breakpoint(mid) {
+		font-size: 60px;
+	}
+	@include breakpoint(large) {
+		font-size: 100px;
+		margin-bottom: 20px;
+	}
+}
+
+.page-header {
+	margin-bottom: 50px;
+	.taxonomy-description {
+		padding: 15px;
+		color: $dgrey;
+		font-style: italic;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	clear: both;
+	font-family: $serif;
+	a {
+		color: #222;
+		text-decoration: none;
+		&:hover { color: #111; }
+	}
+}
+
+h1 {
+	font-size: 34px;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: 'icomoon'; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}

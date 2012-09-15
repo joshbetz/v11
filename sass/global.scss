@@ -1,0 +1,37 @@
+* {
+	@include box-sizing( 'border-box' );
+	position: relative;
+	outline: 0;
+}
+
+html { max-width: 1460px; margin: 0 auto; }
+
+body {
+	padding: 10px 0;
+	font-family: $body;
+	font-size: 16px;
+	color: #222;
+	@include breakpoint(large) {
+		padding: 40px 5%;
+	}
+}
+
+#main {
+	background: white;
+	padding: 25px 4%;
+	border: solid 5px #ccc;
+	top: 40px;
+	margin-bottom: 40px;
+	@include box-shadow( 0 0 20px rgba(0,0,0,.75) );
+	overflow: hidden;
+	@include breakpoint(large) {
+		padding: 4%;
+		top: 0;
+		margin-bottom: 0;
+	}
+}
+
+input {
+	padding: 4px !important;
+	font-size: 14px;
+}

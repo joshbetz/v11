@@ -1,0 +1,113 @@
+#sidebar {
+	max-width: 340px;
+	margin: 0 auto;
+	margin-top: 60px;
+	@include breakpoint(huge) {
+		width: 30%;
+		float: right;
+		padding-left: 2%;
+		margin-top: 0;
+	}
+	.page-template-default & {
+		display: none;
+	}
+}
+
+/* Sidebar Widgets */
+aside {
+	margin: 40px 0;
+	h1 {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	li, p {
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+}
+
+/* Bio Widget */
+.widget_v11_bio_widget {
+	text-align: center;
+	clear: both;
+	font-family: $serif;
+	margin: 0 0 30px 0;
+	img {
+		@include box-shadow( 0 0 0 5px $lgrey );
+		@include border-radius( 51px );
+	}
+	.name {
+		height: 112px;
+		font-size: 26px;
+		display: block;
+	}
+	.first-name, .last-name {
+		position: absolute;
+		line-height: 112px;
+	}
+	.first-name {
+		right: 50%;
+		margin-right: 80px;
+	}
+	.last-name {
+		left: 50%;
+		margin-left: 80px;
+	}
+	.bio {
+		font-style: italic;
+		color: $grey;
+		margin: 40px 0 10px;
+		line-height: 1.6;
+		font-size: 13px;
+	}
+	&:after {
+		content: "~";
+		color: $lgrey;
+		font-size: 100px;
+		font-family: "Baskerville", serif;
+	}
+}
+
+/* Icons Widget */
+.widget_v11_icons_widget {
+	text-align: center;
+	margin-bottom: 0 0 20px 0;
+	li {
+		display: inline-block;	
+		margin: 8px;
+	}
+	a {
+		height: 33px;
+		width: 33px;
+		background-image: url(../images/icons.png);
+		display: inline-block;
+		text-indent: -10000px;
+		@include retina() {
+			background-image: url(../images/icons@2x.png);
+			background-size: 451px 33px;
+		}
+	}
+
+	$btnwidth: 38px * -1;
+	.twitter    { background-position: $btnwidth * 0  0; }
+	.dribbble   { background-position: $btnwidth * 1  0; }
+	.forrst     { background-position: $btnwidth * 2  0; }
+	.github     { background-position: $btnwidth * 3  0; }
+	.googleplus { background-position: $btnwidth * 4  0; }
+	.facebook   { background-position: $btnwidth * 5  0; }
+	.linkedin   { background-position: $btnwidth * 6  0; }
+	.lastfm     { background-position: $btnwidth * 7  0; }
+	.skype      { background-position: $btnwidth * 8  0; }
+	.flickr     { background-position: $btnwidth * 9  0; }
+	.vimeo      { background-position: $btnwidth * 10 0; }
+	.wordpress  { background-position: $btnwidth * 11 0; }
+}
+
+.jetpack_subscription_widget {
+	p {
+		font-style: italic;
+		color: grey;
+		font-size: 12px;
+		line-height: 1.3;
+	}
+}
