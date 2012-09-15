@@ -15,11 +15,15 @@ class V11_Theme {
 	
 	function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
+
+		// Scripts
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		
+		// Theme
 		add_action( 'wp_title', array( $this, 'wp_title' ), 10, 2 );
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
-		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
 		add_action( 'comment_form_before', array( $this, 'comments_reply_script' ) );
 
 		// Set up the customizer
@@ -28,11 +32,16 @@ class V11_Theme {
 	}
 
 	function init() {
+		// Link post format
+		add_filter( 'the_title', array( $this, 'link_titles' ), 10, 2 );
 		add_filter( 'post_link', array( $this, 'link_post_links' ) );
 		add_filter( 'the_permalink', array( $this, 'link_permalinks' ) );
-		add_filter( 'the_title', array( $this, 'link_titles' ), 10, 2 );
-		add_filter( 'nav_menu_css_class', array( $this, 'menu_item_has_children' ), 10, 3 );
+
+		// Main nav menu
 		add_filter( 'wp_page_menu_args', array( $this, 'home_page_menu_item' ) );
+		add_filter( 'nav_menu_css_class', array( $this, 'menu_item_has_children' ), 10, 3 );
+		
+		// Customize shortlink presentation
 		add_filter( 'the_shortlink', array( $this, 'shortlink_remove_protocol' ), 10, 4 );
 	}
 
@@ -92,7 +101,6 @@ class V11_Theme {
 	}
 
 	function customizer( $theme ) {
-
 		// Google Fonts
 		$theme->add_section( 'v11_fonts', array(
 			'title' => __( 'Fonts', 'v11' ),
