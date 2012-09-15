@@ -184,7 +184,7 @@ class V11_Theme {
 	}
 
 	function menu_item_has_children( $classes, $item, $args ) {
-		if ( isset( $args->has_children ) && $args->has_children )
+		if ( ( isset( $args->has_children ) && $args->has_children ) || ( isset( $args['has_children'] ) && $args['has_children'] ) )
 			$classes[] = 'menu-item-has-children';
 		return $classes;
 	}
