@@ -243,9 +243,9 @@ class V11_Theme {
 	function link_titles( $title, $id ) {
 		if ( has_post_format( 'link', $id ) && !is_admin() ) {
 			if ( is_feed() )
-				return $title . ' &rarr;';
+				return ' &rarr;' . $title;
 			elseif ( is_home() || is_archive() || is_single( $id ) || is_search() )
-				return $title . '&nbsp;&rarr';
+				return '&rarr;&nbsp;' . $title;
 		}
 		
 		return $title;
