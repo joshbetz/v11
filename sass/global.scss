@@ -1,3 +1,16 @@
+::selection {
+	background: lighten($yellow, 30%);
+	color: black;
+}
+::-moz-selection {
+	background: lighten($yellow, 30%);
+	color: black;
+}
+::-webkit-selection {
+	background: lighten($yellow, 30%);
+	color: black;
+}
+
 * {
 	@include box-sizing( 'border-box' );
 	position: relative;
@@ -10,7 +23,7 @@ body {
 	padding: 10px 0;
 	font-family: $body;
 	font-size: 16px;
-	color: #222;
+	color: #333;
 	@include breakpoint(large) {
 		padding: 40px 5%;
 	}
