@@ -37,12 +37,13 @@ article {
 		font-size: 13px;
 		line-height: 25px;
 		margin-right: 75px;
-		span {
+		span, time {
 			margin-right: 10px;
 			&:last-child {
 				margin-right: 0;
 			}
 		}
+		.meta-tags .icon { font-size: 10px; }
 		.icon {
 			font-size: 12px; margin-right: 5px;
 		}
