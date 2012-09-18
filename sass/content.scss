@@ -18,6 +18,15 @@ article {
 	padding: 20px;
 	overflow: hidden;
 	.single & { margin-bottom: 0; }
+	a {
+		text-decoration: none;
+		border-bottom: solid 1px $grey;
+		display: inline-block;
+		line-height: 1;
+		&:hover, &:focus {
+			border-color: $lgrey;
+		}
+	}
 	h1 {
 		font-size: 28px;
 		margin-bottom: 10px;
@@ -251,8 +260,8 @@ table {
 
 /* Links */
 a {
-	color: blue;
-	&:hover {
-		color: darkblue;
+	color: $blue;
+	&:hover, &:focus {
+		color: darken($blue, 15%);
 	}
 }

@@ -33,7 +33,7 @@
 	}
 	&.bypostauthor {
 		background: $yellow;
-		border: solid 3px $darkyellow;
+		border: solid 3px darken($yellow, 15%);
 	}
 	article {
 		margin: 0;
