@@ -42,12 +42,12 @@
 <?php endif; ?>
 
 <?php if ( ! is_search() ): ?>
-	<div class="article">
+	<section class="article">
 		<?php the_content( '<p class="readmore">' . __( 'Continue reading', 'v11' ) . ' <span class="meta-nav">&#10095;</span></p>' ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
-	</div>
+	</section>
 <?php else: ?>
-	<div class="article">
+	<section class="article">
 		<?php the_excerpt(); ?>
-	</div>
+	</section>
 <?php endif; ?>
