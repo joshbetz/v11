@@ -111,21 +111,7 @@ article {
 		display: none;
 	}
 }
-.article {
-	line-height: 1.7;
-	h1, h2, h3, h4, h5, h6 { margin: .8em 0 .2em; }
-	h1 { font-size: 24px; }
-	h2 { font-size: 20px; }
-	h3 { font-size: 16px; }
-	h4 { font-size: 14px; }
-}
 .fluid-width-video-wrapper { margin-bottom: 20px; }
-
-address, em { font-style: italic; }
-strong { font-weight: bold; }
-abbr { border-bottom: dotted 1px $grey; }
-q:before { content: "\201C"; }
-q:after { content: "\201D"; }
 
 #footer {
 	font-size: 12px;
@@ -163,38 +149,6 @@ q:after { content: "\201D"; }
 		padding: 5px 20px 5px 0;
 	}
 	p { margin-bottom: 5px; }
-}
-
-blockquote {
-	font-size: 16px;
-	font-style: italic;
-	padding: 0 20px;
-	border-left: solid 3px $lgrey;
-	margin: 20px 5px;
-	cite {
-		color: $grey;
-		font-style: normal;
-		font-size: 14px;
-		a { color: $grey; }
-		&:before { content: "\2014"; margin-right: 10px; }
-	}
-	@include breakpoint(large) {
-		font-size: 18px;
-		margin: 30px 20px;
-	}
-}
-
-pre, code {
-  font-family: $monospace;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
-  padding: 2px;
-  font-size: 14px;
-  @include border-radius(4px);
-}
-pre {
-  overflow-x: scroll;
-  code { background: transparent; border: 0; padding: 0; }
 }
 
 table {
@@ -257,12 +211,4 @@ table {
 	letter-spacing: 1px;
 	color: $dgrey;
 	@include border-radius( 3px );
-}
-
-/* Links */
-a {
-	color: $blue;
-	&:hover, &:focus {
-		color: darken($blue, 15%);
-	}
 }
