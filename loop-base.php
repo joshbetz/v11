@@ -13,7 +13,7 @@
 	</header>
 
 <?php else: ?>
-	
+
 		<header>
 			<?php if ( get_the_title() ): ?>
 
@@ -38,7 +38,7 @@
 
 			<?php get_template_part( 'content-meta' ); ?>
 		</header>
-	
+
 <?php endif; ?>
 
 <?php if ( ! is_search() ): ?>

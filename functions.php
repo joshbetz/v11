@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) )
 class V11_Theme {
 
 	const VERSION = '1.0';
-	
+
 	function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
 		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
@@ -20,7 +20,7 @@ class V11_Theme {
 		// Scripts
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-		
+
 		// Theme
 		add_action( 'wp_title', array( $this, 'wp_title' ), 10, 2 );
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
@@ -40,7 +40,7 @@ class V11_Theme {
 		// Main nav menu
 		add_filter( 'wp_page_menu_args', array( $this, 'home_page_menu_item' ) );
 		add_filter( 'nav_menu_css_class', array( $this, 'menu_item_has_children' ), 10, 3 );
-		
+
 		// Customize shortlink presentation
 		add_filter( 'the_shortlink', array( $this, 'shortlink_remove_protocol' ), 10, 4 );
 	}
@@ -222,32 +222,32 @@ class V11_Theme {
 
 	function link_post_links( $link ) {
 		global $post;
-		
+
 		if ( is_feed() && has_post_format( 'link', $post->ID ) ) {
 			return get_post_meta($post->ID, '_format_link_url', true);
 		}
-		
+
 		return $link;
 	}
 
 	function link_permalinks( $link ) {
 		global $post;
-		
+
 		if ( has_post_format( 'link', $post->ID ) ) {
 			return get_post_meta($post->ID, '_format_link_url', true);
 		}
-		
+
 		return $link;
 	}
 
 	function link_titles( $title, $id ) {
 		if ( has_post_format( 'link', $id ) && !is_admin() ) {
 			if ( is_feed() )
-				return ' &rarr;' . $title;
+				return '&rarr; ' . $title;
 			elseif ( is_home() || is_archive() || is_single( $id ) || is_search() )
 				return '&rarr;&nbsp;' . $title;
 		}
-		
+
 		return $title;
 	}
 }

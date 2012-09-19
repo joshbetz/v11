@@ -8,7 +8,7 @@ class V11_Bio_Widget extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 		global $v11_theme;
-		
+
 		extract( $args );
 		$email = isset( $instance['email'] ) ? esc_attr( $instance['email'] ) : get_option( 'admin_email' );
 
@@ -38,7 +38,7 @@ class V11_Bio_Widget extends WP_Widget {
 		$email = isset( $instance['email'] ) ? $instance['email'] : '';
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Email:', 'v11' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Email:', 'v11' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="email" value="<?php echo esc_attr( $email ); ?>">
 		</p>
 		<?php
