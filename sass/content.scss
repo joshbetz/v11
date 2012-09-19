@@ -70,7 +70,7 @@ article {
 	p, pre, ul, ol, dl, dd, video, embed, audio, address, iframe {
 		margin-bottom: 30px;
 	}
-	embed, iframe, audio, video, object {
+	audio, video {
 		width: 100%;
 	}
 	ol, ul {
@@ -188,7 +188,7 @@ table {
 	color: $grey;
 	text-align: center;
 }
-.gallery { 
+.gallery {
 	img {
 		border-width: 1px !important;
 		padding: 5px;
