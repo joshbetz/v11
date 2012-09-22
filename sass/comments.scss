@@ -212,10 +212,17 @@
 	}
 	p { margin: 20px 0; }
 	.required { position: absolute; }
+	.comment-notes { font-size: 12px; font-style: italic; color: $grey; }
+	.form-allowed-tags { display: none; }
 	input, textarea { border: solid 1px $grey; }
 	input, label { font-size: 16px; }
 	label { font-weight: bold; width: 70px; display: block; }
-	input { padding: 4px; }
+	input[type=text],
+	input[type=email] { padding: 4px; }
+	input[type=submit] {
+		@extend .button;
+		cursor: pointer;
+	}
 	textarea {
 		font-size: 14px;
 		line-height: 1.4;
@@ -223,7 +230,4 @@
 		width: 100%;
 		resize: vertical;
 	}
-	.comment-notes { font-size: 12px; font-style: italic; color: $grey; }
-	.form-allowed-tags { display: none; }
-	.form-submit input { padding: 8px; background: $grey; @include border-radius( 4px ); cursor: pointer; }
 }
