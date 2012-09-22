@@ -85,8 +85,8 @@ blockquote {
 
 pre, code {
   font-family: $monospace;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
+  background-color: rgba(black, 0.02);
+  border: 1px solid rgba(black, 0.08);
   padding: 2px;
   font-size: 14px;
   @include border-radius(4px);
