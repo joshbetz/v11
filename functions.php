@@ -244,8 +244,6 @@ class V11_Theme {
 		if ( has_post_format( 'link', $id ) && !is_admin() ) {
 			if ( is_feed() )
 				return '&rarr; ' . $title;
-			elseif ( is_home() || is_archive() || is_single( $id ) || is_search() )
-				return '&rarr;&nbsp;' . $title;
 		}
 
 		return $title;
