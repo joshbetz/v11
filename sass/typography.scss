@@ -100,6 +100,15 @@ pre {
   code { background: transparent; border: 0; padding: 0; }
 }
 
+sub, sup {
+	font-size: 12px;
+	a {
+		border: 0;
+	}
+}
+sup { vertical-align: super; }
+sub { vertical-align: sub; }
+
 /* Links */
 a {
 	color: $blue;
