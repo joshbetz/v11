@@ -239,4 +239,7 @@
 	&.github:before {
 		content: "\25";
 	}
+	&.rss:before {
+		content: "\26";
+	}
 }
