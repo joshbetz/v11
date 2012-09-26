@@ -140,6 +140,7 @@
 	}
 	form {
 		position: static;
+		.button { display: none; }
 	}
 	#searchbox {
 		position: absolute;
@@ -202,7 +203,7 @@
 .button {
 	border: 0;
 	background: $yellow;
-	padding: 10px 16px;
+	padding: 7px 16px;
 	border-radius: 4px;
 	box-shadow: 0 1px 0 darken($yellow, 15%), 0 3px 0 -1px darken($yellow, 15%), 0 5px 0 -2px darken($yellow, 15%), 0 7px 0 -3px darken($yellow, 15%), 0 5px 3px rgba(black, 0.1);
 	text-transform: uppercase;
@@ -213,9 +214,11 @@
 	color: #333;
 	text-shadow: 1px 1px rgba(white, 0.3);
 	margin: 5px 0;
+	top: -5px;
+	cursor: pointer;
 	&:active {
 		box-shadow: 0 1px 0 darken($yellow, 15%), 0 3px 0 -1px darken($yellow, 15%), 0 3px 2px rgba(black, 0.2);
-		top: 2px;
+		top: -3px;
 	}
 	&:hover, &:focus {
 		background: darken($yellow, 10%);
@@ -225,6 +228,8 @@
 
 .download {
 	@extend .button;
+	padding-left: 10px;
+	padding-right: 12px;
 	&:before {
 		content: "\21";
 		font-family: "icomoon";
