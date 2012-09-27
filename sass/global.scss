@@ -49,3 +49,10 @@ input {
 	padding: 4px;
 	font-size: 14px;
 }
+input[type=submit] {
+	@extend .button;
+}
+textarea {
+	width: 100%;
+	resize: vertical;
+}
