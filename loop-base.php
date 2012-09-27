@@ -22,7 +22,7 @@
 					$link = get_post_meta($post->ID, '_format_link_url', true);
 					if ( empty( $link ) ) $link = v11_url_grabber( get_the_content() ); ?>
 
-					<h1><a href="<?php echo $link; ?>" rel="nofollow"><?php the_title(); ?> <span class="rightarrow">&rarr;</span></a></h1>
+					<h1><a href="<?php echo $link; ?>" rel="nofollow"><?php the_title(); ?>&nbsp;<span class="rightarrow">&rarr;</span></a></h1>
 
 				<?php elseif ( is_single() ): ?>
 
