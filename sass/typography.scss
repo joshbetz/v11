@@ -89,6 +89,7 @@ pre, code {
   border: 1px solid rgba(black, 0.08);
   padding: 2px;
   font-size: 14px;
+  white-space: pre;
   @include border-radius(4px);
 }
 pre {
