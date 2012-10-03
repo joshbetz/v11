@@ -33,8 +33,8 @@ aside {
 	font-family: $serif;
 	margin: 0 0 30px 0;
 	img {
-		@include box-shadow( 0 0 0 5px $lgrey );
-		@include border-radius( 51px );
+		border-radius: 51px;
+		box-shadow: 0 0 0 5px $lgrey;
 	}
 	.name {
 		height: 112px;

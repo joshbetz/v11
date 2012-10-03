@@ -66,8 +66,8 @@
 	.avatar {
 		margin: 5px;
 		width: 50px; height: 50px;
-		@include box-shadow( 0 0 0 5px $lgrey );
-		@include border-radius( 35px );
+		border-radius: 35px;
+		box-shadow: 0 0 5px $lgrey;
 		@include breakpoint(large) {
 			width: 70px; height: 70px;
 		}
@@ -152,7 +152,7 @@
 		.avatar {
 			width: 50px;
 			height: 50px;
-			@include border-radius( 25px );
+			border-radius: 25px;
 		}
 		.comment-content {
 			@include breakpoint(large) {

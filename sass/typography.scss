@@ -90,7 +90,7 @@ pre, code {
   padding: 2px;
   font-size: 14px;
   white-space: pre;
-  @include border-radius(4px);
+  border-radius: 4px;
 }
 pre {
   overflow-x: scroll;
