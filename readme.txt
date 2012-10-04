@@ -18,5 +18,16 @@ v11 is a responsive theme that utilizes the customizer to give you added control
 
 == Changelog ==
 
+= 1.1 =
+* Display "possibly related posts" on the 404 page
+* Leave a custom note if comments are closed but there are already comments
+* Use <time> element to be more semantic about dates
+* Add some icons to the icon font
+* Properly translate everything
+* Add submit button to search form
+* Organize SASS into separate files
+* Bug Fix: More robustly check if a menu item has children
+* Bug Fix: Only prevent widows on titles if they're more than 1 word long
+
 = 1.0 =
 * Initial version
