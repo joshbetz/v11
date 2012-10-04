@@ -84,7 +84,7 @@ aside {
 		text-indent: -10000px;
 		@include retina() {
 			background-image: url(../images/icons@2x.png);
-			background-size: 451px 33px;
+			background-size: 489px 33px;
 		}
 	}
 
@@ -101,6 +101,7 @@ aside {
 	.flickr     { background-position: $btnwidth * 9  0; }
 	.vimeo      { background-position: $btnwidth * 10 0; }
 	.wordpress  { background-position: $btnwidth * 11 0; }
+	.rss        { background-position: $btnwidth * 12 0; }
 }
 
 .jetpack_subscription_widget {

@@ -15,7 +15,8 @@ class V11_Icons_Widget extends WP_Widget {
 		'skype' => 'Skype',
 		'flickr' => 'Flickr',
 		'vimeo' => 'Vimeo',
-		'wordpress' => 'WordPress'
+		'wordpress' => 'WordPress',
+		'rss' => 'RSS'
 	);
 
 	public function __construct() {
