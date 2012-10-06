@@ -15,6 +15,19 @@
 			$datetime
 		);
 	?>
-	<span class="meta-shortlink"><span class="icon" aria-hidden="true" data-icon="&#x22;"></span><span class="assistive-text">Shortlink: </span><?php echo the_shortlink(); ?></span>
+
+	<span class="meta-shortlink"><span class="icon" aria-hidden="true" data-icon="&#x22;"></span><span class="assistive-text">Shortlink: </span>
+		<?php
+			$permalinks = ! ( get_option('permalink_structure') == '' );
+			if ( $permalinks ) {
+				echo the_shortlink();
+			} else {
+				global $v11_theme;
+				$permalink = get_permalink( $post->ID );
+				echo $v11_theme->shortlink_remove_protocol( $permalink, $permalink, $permalink, $permalink );
+			}
+		?>
+	</span>
+
 	<?php the_tags( '<span class="meta-tags"><span class="icon" aria-hidden="true" data-icon="&#x23;"></span><span class="assistive-text">' . __( 'Tags:', 'v11' ) . ' </span>', ', ', '</span>' ); ?>
 </div>
