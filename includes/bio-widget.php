@@ -13,10 +13,8 @@ class V11_Bio_Widget extends WP_Widget {
 		$email = isset( $instance['email'] ) ? esc_attr( $instance['email'] ) : get_option( 'admin_email' );
 
 		$author = get_user_by( 'email', $email );
-		$name = isset( $instance['name'] ) ? esc_attr( $instance['name'] ) : $author->display_name;
-		$name = explode( ' ', $name );
-		$first_name = $name[0];
-		$last_name = $name[1];
+		$first_name = get_the_author_meta( 'first_name', $author->ID );
+		$last_name = get_the_author_meta( 'last_name', $author->ID );
 
 		echo $before_widget;
 		echo "<div class='name'>";
