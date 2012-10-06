@@ -145,22 +145,6 @@ class V11_Theme {
 			'section' => 'v11_messages',
 			'type' => 'text'
 		) );
-
-		// Title Color
-		$theme->add_setting( 'title_color' );
-		$theme->add_control( new WP_Customize_Color_Control( $theme, 'title_color', array(
-			'label' => __( 'Title Color', 'v11' ),
-			'section' => 'colors',
-			'settings' => 'title_color'
-		) ) );
-
-		// Link Color
-		$theme->add_setting( 'link_color' );
-		$theme->add_control( new WP_Customize_Color_Control( $theme, 'link_color', array(
-			'label' => __( 'Link Color', 'v11' ),
-			'section' => 'colors',
-			'settings' => 'link_color'
-		) ) );
 	}
 
 	function wp_title( $title, $sep ) {

@@ -10,10 +10,6 @@
 	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 
 	<?php wp_head(); ?>
-
-	<?php // Use the customizer to override default styles ?>
-	<?php if ( get_theme_mod( 'title_color', false ) ): ?><style>#sitetitle a { color: <?php echo get_theme_mod( 'title_color' ); ?> }</style><?php endif; ?>
-	<?php if ( get_theme_mod( 'link_color', false ) ): ?><style>a { color: <?php echo get_theme_mod( 'link_color' ); ?> }</style><?php endif; ?>
 </head>
 <body <?php body_class(); ?>>
 
