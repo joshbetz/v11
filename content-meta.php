@@ -16,7 +16,7 @@
 		);
 	?>
 
-	<span class="meta-shortlink"><span class="icon" aria-hidden="true" data-icon="&#x22;"></span><span class="assistive-text">Shortlink: </span>
+	<span class="meta-shortlink"><span class="icon" aria-hidden="true" data-icon="&#x22;"></span><span class="assistive-text"><?php _e( 'Shortlink:', 'v11' ); ?> </span>
 		<?php
 			$permalinks = ! ( get_option('permalink_structure') == '' );
 			if ( $permalinks ) {
