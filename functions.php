@@ -4,7 +4,7 @@ include 'includes/bio-widget.php';
 include 'includes/icons-widget.php';
 
 if ( ! isset( $content_width ) )
-	$content_width = 710; /* pixels */
+	$content_width = 844; /* pixels */
 
 if ( ! defined( 'V11_LEFT_NAV_ARROW' ) )
 	define( 'V11_LEFT_NAV_ARROW', '&larr;' );
