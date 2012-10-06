@@ -60,7 +60,7 @@ class V11_Theme {
 
 		// Post thumbnails are displayed above the article.
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 960, 390, true );
+		set_post_thumbnail_size( 804, 322, true );
 
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
