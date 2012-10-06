@@ -6,6 +6,12 @@ include 'includes/icons-widget.php';
 if ( ! isset( $content_width ) )
 	$content_width = 710; /* pixels */
 
+if ( ! defined( 'V11_LEFT_NAV_ARROW' ) )
+	define( 'V11_LEFT_NAV_ARROW', '&larr;' );
+
+if ( ! defined( 'V11_RIGHT_NAV_ARROW' ) )
+	define( 'V11_RIGHT_NAV_ARROW', '&rarr;' );
+
 /**
  * V11 Theme
  */
@@ -323,17 +329,17 @@ function v11_content_nav( $nav_id = 'navigation' ) {
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&#10094;', 'Previous post link', 'v11' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&#10095;', 'Next post link', 'v11' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( V11_LEFT_NAV_ARROW, 'Previous post link', 'v11' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( V11_RIGHT_NAV_ARROW, 'Next post link', 'v11' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( sprintf( __( '%s Older posts', 'v11' ), '<span class="meta-nav">&#10094;</span>' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( sprintf( __( '%s Older posts', 'v11' ), '<span class="meta-nav">' . V11_LEFT_NAV_ARROW . '</span>' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( sprintf( __( 'Newer posts %s', 'v11' ), '<span class="meta-nav">&#10095;</span>' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( sprintf( __( 'Newer posts %s', 'v11' ), '<span class="meta-nav">' . V11_RIGHT_NAV_ARROW . '</span>' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>

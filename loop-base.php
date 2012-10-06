@@ -43,7 +43,7 @@
 
 <?php if ( ! is_search() ): ?>
 	<section class="article">
-		<?php the_content( '<p class="readmore">' . __( 'Continue reading', 'v11' ) . ' <span class="meta-nav">&#10095;</span></p>' ); ?>
+		<?php the_content( '<p class="readmore">' . __( 'Continue reading', 'v11' ) . ' <span class="meta-nav">' . V11_RIGHT_NAV_ARROW . '</span></p>' ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
 	</section>
 <?php else: ?>
