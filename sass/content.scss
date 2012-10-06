@@ -188,7 +188,8 @@ table {
 		box-shadow: 0 0 5px rgba(black, .15);
 	}
 }
-.gallery-caption {}
+.gallery-item { float: none; display: inline-block; margin: 10px 0; }
+.gallery-caption { padding: 8px; }
 
 .aligncenter { margin: 0 auto; display: block; }
 .alignleft { float: left; margin: 10px; margin-left: 0; }

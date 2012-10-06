@@ -15,7 +15,6 @@ Text Domain: v11
 @import "css/style.css";
 
 /* Required classes */
-/* These are also set as empty in sass/style.scss, but SASS doesn't
- * removes them from the compiled CSS to save space */
+/* This are also set as empty in sass/style.scss, but SASS doesn't
+ * removes it from the compiled CSS to save space */
 .sticky {}
-.gallery-caption {}
