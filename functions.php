@@ -17,7 +17,7 @@ if ( ! defined( 'V11_RIGHT_NAV_ARROW' ) )
  */
 class V11_Theme {
 
-	const VERSION = '1.0';
+	const VERSION = '1.1';
 
 	function __construct() {
 		add_action( 'init', array( $this, 'init' ) );

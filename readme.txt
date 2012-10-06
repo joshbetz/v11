@@ -1,7 +1,7 @@
 === v11 ===
 Contributors: betzster
 Tags:         yellow, white, two-columns, right-sidebar, flexible-width, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready
-Stable tag:   1.0
+Stable tag:   1.1
 License:      GPLv2 or later
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 
