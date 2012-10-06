@@ -30,6 +30,7 @@ v11 is a responsive theme that utilizes the customizer to give you added control
 * Bug Fix: Only prevent widows on titles if they're more than 1 word long
 * Bug Fix: Use first and last name instead of display name in bio widget
 * Bug Fix: Shortlinks even if permalinks are disabled
+* Bug Fix: Allow title of icons widget to be saved
 
 = 1.0 =
 * Initial version

@@ -43,7 +43,7 @@ class V11_Icons_Widget extends WP_Widget {
 
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
-		$instance['title'] = sanitize_email( $new_instance['title'] );
+		$instance['title'] = esc_attr( $new_instance['title'] );
 		$instance['icons'] = array_map( 'esc_url', $new_instance['icons'] );
 		return $instance;
 	}
@@ -57,7 +57,7 @@ class V11_Icons_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="title" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<span>Icons</span>
+			<span><?php _e( 'Icons', 'v11' ); ?></span>
 			<ul>
 				<?php
 					$field = $this->get_field_name( 'icons' );
