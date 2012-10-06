@@ -76,6 +76,11 @@ class V11_Theme {
 		wp_enqueue_style( 'v11', get_stylesheet_uri(), false, self::VERSION );
 		wp_enqueue_script( 'v11', get_template_directory_uri() . '/js/site.min.js', array( 'jquery', 'prettyprint', 'fitvids' ), self::VERSION, true );
 
+		if ( get_theme_mod( 'v11_google_fonts' ) ) {
+			wp_enqueue_style( 'cardo_font', 'http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' );
+			wp_enqueue_style( 'bree_font', 'http://fonts.googleapis.com/css?family=Bree+Serif' );
+		}
+
 		// Load Google's prettyprint for code blocks
 		wp_enqueue_script( 'prettyprint', get_template_directory_uri() . '/js/google-code-prettify/prettify.js', false, false, true );
 		wp_enqueue_style( 'prettyprint', get_template_directory_uri() . '/js/google-code-prettify/prettify.css' );

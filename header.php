@@ -9,11 +9,6 @@
 	<meta name="viewport" content="width=device-width">
 	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 
-	<?php if ( get_theme_mod( 'v11_google_fonts', false ) ): ?>
-		<link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-	<?php endif; ?>
-
 	<?php wp_head(); ?>
 
 	<?php // Use the customizer to override default styles ?>
