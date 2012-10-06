@@ -151,6 +151,32 @@ class V11_Theme {
 			'section' => 'v11_messages',
 			'type' => 'text'
 		) );
+
+		// Meta
+		$theme->add_section( 'v11_meta', array(
+			'title' => __( 'Meta', 'v11' ),
+			'priority' => 35
+		) );
+
+		// Display Tags
+		$theme->add_setting( 'v11_meta_tags', array(
+			'default' => true
+		) );
+		$theme->add_control( 'v11_meta_tags', array(
+			'label' => __( 'Display Tags', 'v11' ),
+			'section' => 'v11_meta',
+			'type' => 'checkbox'
+		) );
+
+		// Display Categories
+		$theme->add_setting( 'v11_meta_categories', array(
+			'default' => true
+		) );
+		$theme->add_control( 'v11_meta_categories', array(
+			'label' => __( 'Display Categories', 'v11' ),
+			'section' => 'v11_meta',
+			'type' => 'checkbox'
+		) );
 	}
 
 	function wp_title( $title, $sep ) {

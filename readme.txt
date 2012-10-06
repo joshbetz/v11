@@ -26,6 +26,7 @@ v11 is a responsive theme that utilizes the customizer to give you added control
 * Properly translate everything
 * Add submit button to search form
 * Organize SASS into separate files
+* Option to show categories and tags
 * Bug Fix: More robustly check if a menu item has children
 * Bug Fix: Only prevent widows on titles if they're more than 1 word long
 * Bug Fix: Use first and last name instead of display name in bio widget

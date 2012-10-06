@@ -29,5 +29,11 @@
 		?>
 	</span>
 
-	<?php the_tags( '<span class="meta-tags"><span class="icon" aria-hidden="true" data-icon="&#x23;"></span><span class="assistive-text">' . __( 'Tags:', 'v11' ) . ' </span>', ', ', '</span>' ); ?>
+	<?php
+		if ( get_theme_mod( 'v11_meta_categories', true ) )
+			printf( '<span class="meta-categories"><span class="icon" aria-hidden="true" data-icon="&#x27;"></span><span class="assistive-text">%s</span>%s</span>', __( 'Categories:', 'v11' ), get_the_category_list( ', ' ) );
+
+		if ( get_theme_mod( 'v11_meta_tags', true ) )
+			the_tags( '<span class="meta-tags"><span class="icon" aria-hidden="true" data-icon="&#x23;"></span><span class="assistive-text">' . __( 'Tags:', 'v11' ) . ' </span>', ', ', '</span>' );
+	?>
 </div>
