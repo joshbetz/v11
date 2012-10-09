@@ -82,6 +82,7 @@ aside {
 		background-image: url(../images/icons.png);
 		display: inline-block;
 		text-indent: -10000px;
+		border: 0;
 		@include retina() {
 			background-image: url(../images/icons@2x.png);
 			background-size: 489px 33px;
