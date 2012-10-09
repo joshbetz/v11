@@ -15,7 +15,7 @@
 
 				} elseif ( is_author() ) {
 					$author = get_queried_object()->data;
-								printf( __( 'Author Archives: %s', '_s' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( $author->ID ) . '" title="' . esc_attr( $author->display_name ) . '" rel="me">' . esc_html( $author->display_name ) . '</a></span>' );
+					printf( __( 'Author Archives: %s', '_s' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( $author->ID ) . '" title="' . esc_attr( $author->display_name ) . '" rel="me">' . esc_html( $author->display_name ) . '</a></span>' );
 
 				} elseif ( is_day() ) {
 					printf( __( 'Daily Archives: %s', 'v11' ), '<span>' . get_the_date() . '</span>' );
