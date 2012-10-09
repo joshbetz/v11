@@ -19,35 +19,12 @@ article {
 	padding: 20px;
 	overflow: hidden;
 	.single & { margin-bottom: 0; }
-	a {
-		text-decoration: none;
-		border-bottom: solid 1px $grey;
-		display: inline-block;
-		line-height: 1;
-		&:hover, &:focus {
-			border-color: $lgrey;
-		}
-	}
 	h1 {
 		font-size: 28px;
 		margin-bottom: 10px;
 		margin-right: 75px;
 	}
 	header { margin-bottom: 40px; }
-	.post-meta {
-		font-size: 13px;
-		line-height: 25px;
-		margin-right: 75px;
-		span, time {
-			margin-right: 10px;
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-		.icon {
-			font-size: 11px; margin-right: 5px;
-		}
-	}
 	.comment-count {
 		position: absolute;
 		right: 0; top: 0;
@@ -66,7 +43,7 @@ article {
 	.meta-tags {
 		margin: 16px 0;
 	}
-	img { max-width: 100%; height: auto; }
+	img, audio, video { max-width: 100%; height: auto; }
 	p, pre, ul, ol, dl, dd, video, embed, audio, address, iframe {
 		margin-bottom: 30px;
 	}
@@ -80,10 +57,6 @@ article {
 		}
 	}
 	ol.linenums { margin-left: 12px; }
-	ol { list-style: decimal; }
-	ul { list-style: disc; }
-	dl { margin-left: 15px; }
-	dt { font-weight: bold; margin-top: 10px; }
 	.meta-date {
 		padding: 3px 6px;
 		margin: 5px 0;
@@ -104,6 +77,29 @@ article {
 		display: none;
 	}
 }
+
+.post-meta {
+	font-size: 13px;
+	line-height: 25px;
+	margin-right: 75px;
+	span, time {
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.icon {
+		font-size: 11px; margin-right: 5px;
+	}
+}
+.meta-date {
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: $dgrey;
+	border-radius: 3px;
+}
+
 .fluid-width-video-wrapper { margin-bottom: 20px; }
 
 #footer {
@@ -197,12 +193,3 @@ table {
 .page-links { clear: both; }
 
 .sticky {}
-
-/* dates */
-.meta-date {
-	font-size: 12px;
-	text-decoration: none;
-	letter-spacing: 1px;
-	color: $dgrey;
-	border-radius: 3px;
-}

@@ -61,8 +61,20 @@ h1 {
 address, em { font-style: italic; }
 strong { font-weight: bold; }
 abbr { border-bottom: dotted 1px $grey; }
+
 q:before { content: "\201C"; }
 q:after { content: "\201D"; }
+
+ol { list-style: decimal; }
+ul { list-style: disc; }
+ul, ol {
+	ul, ol {
+		margin-left: 30px;
+	}
+}
+
+dl { margin-left: 15px; }
+dt { font-weight: bold; margin-top: 10px; }
 
 blockquote {
 	font-size: 16px;
@@ -113,6 +125,18 @@ a {
 	color: $blue;
 	&:hover, &:focus {
 		color: darken($blue, 15%);
+	}
+}
+
+article, aside {
+	a {
+		text-decoration: none;
+		border-bottom: solid 1px $grey;
+		display: inline-block;
+		line-height: 1;
+		&:hover, &:focus {
+			border-color: $lgrey;
+		}
 	}
 }
 
